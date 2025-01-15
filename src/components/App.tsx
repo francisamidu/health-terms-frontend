@@ -1,16 +1,10 @@
-import Avatar from 'components/Avatar'
-import logo from 'assets/logo.svg'
+import React from 'react'
+import Hero from './Hero'
 
-const randoms = [
-  [1, 2],
-  [3, 4, 5],
-  [6, 7]
-]
-
-function App() {
+const App: React.FC = () => {
   return (
     <>
-      <h1>We are here</h1>
+      <Hero />
     </>
   )
 }

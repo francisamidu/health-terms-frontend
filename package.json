@@ -1,17 +1,13 @@
 {
-  "name": "reactjs-vite-tailwindcss-boilerplate",
-  "description": "This is a boilerplate build with Vite, React 18, TypeScript, Vitest, Testing Library, TailwindCSS 3, Eslint and Prettier.",
+  "name": "health-terms",
+  "description": "A modern and intuitive Health Terms Dashboard designed to simplify access to healthcare terminologies. Built for healthcare professionals, students, and patients, this platform offers streamlined search, categorization, and educational insights into complex medical terms.",
   "version": "0.1.0",
   "private": true,
   "type": "module",
   "author": {
-    "name": "João Paulo Moraes",
-    "email": "joaopaulomoraes@outlook.com",
-    "url": "https://github.com/joaopaulomoraes"
-  },
-  "bugs": {
-    "url": "https://github.com/joaopaulomoraes/reactjs-vite-tailwindcss-boilerplate/issues",
-    "email": "joaopaulomoraes@outlook.com"
+    "name": "Francis Amidu",
+    "email": "francisamidu124@gmail.com",
+    "url": "https://github.com/francisamidu"
   },
   "scripts": {
     "dev": "vite",
@@ -23,8 +19,12 @@
     "typecheck": "tsc --project tsconfig.json --noEmit"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.64.1",
+    "hugeicons-react": "^0.3.0",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.1.1",
+    "uuid": "^11.0.5"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.6.3",

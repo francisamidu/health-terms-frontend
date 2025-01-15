@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Button from 'components/Button'
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -6,51 +7,58 @@ function Navbar() {
   return (
     <nav className="bg-white shadow-md">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="/" className="text-2xl font-bold text-blue-600">
-              HealthTerms
+            <a href="/" className="text-2xl font-bold text-main-dark">
+              <img
+                src="/healthco-logo.png"
+                alt="Health Illustration"
+                className="h-10 w-auto sm:h-8 lg:h-20"
+              ></img>
             </a>
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-6">
-            <a href="/features" className="text-gray-700 hover:text-blue-600">
+            <a
+              href="/features"
+              className="text-main-bluish hover:text-main-dark"
+            >
               Features
             </a>
-            <a href="/about" className="text-gray-700 hover:text-blue-600">
+            <a href="/about" className="text-main-bluish hover:text-main-dark">
               About Us
             </a>
-            <a href="/resources" className="text-gray-700 hover:text-blue-600">
+            <a
+              href="/resources"
+              className="text-main-bluish hover:text-main-dark"
+            >
               Resources
             </a>
-            <a href="/contact" className="text-gray-700 hover:text-blue-600">
+            <a
+              href="/contact"
+              className="text-main-bluish hover:text-main-dark"
+            >
               Contact
             </a>
           </div>
 
           {/* Actions */}
           <div className="hidden md:flex space-x-4">
-            <a
-              href="/login"
-              className="text-gray-700 hover:text-blue-600 font-medium"
-            >
-              Login
-            </a>
-            <a
-              href="/signup"
-              className="px-4 py-2 text-white bg-blue-600 hover:bg-blue-700 rounded-md font-medium"
-            >
-              Get Started
-            </a>
+            <Button
+              className="!bg-white text-main-dark border-[1px] border-main-dark hover:text-white hover:!bg-main-dark"
+              text={'Sign in'}
+              href={'/login'}
+            />
+            <Button text={'Get Started'} href={'/signup'} />
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-blue-600 focus:outline-none"
+              className="text-gray-700 hover:text-main-dark focus:outline-none"
             >
               <svg
                 className="w-6 h-6"
@@ -85,32 +93,32 @@ function Navbar() {
             <div className="space-y-4 mt-4">
               <a
                 href="/features"
-                className="block text-gray-700 hover:text-blue-600"
+                className="block text-gray-700 hover:text-main-dark"
               >
                 Features
               </a>
               <a
                 href="/about"
-                className="block text-gray-700 hover:text-blue-600"
+                className="block text-gray-700 hover:text-main-dark"
               >
                 About Us
               </a>
               <a
                 href="/resources"
-                className="block text-gray-700 hover:text-blue-600"
+                className="block text-gray-700 hover:text-main-dark"
               >
                 Resources
               </a>
               <a
                 href="/contact"
-                className="block text-gray-700 hover:text-blue-600"
+                className="block text-gray-700 hover:text-main-dark"
               >
                 Contact
               </a>
               <div className="space-y-4">
                 <a
                   href="/login"
-                  className="block text-gray-700 hover:text-blue-600"
+                  className="block text-gray-700 hover:text-main-dark"
                 >
                   Login
                 </a>

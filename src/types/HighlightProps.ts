@@ -1,5 +1,6 @@
 export interface HighlightProps {
   className?: string
   title: string
-  subtitle: string
+  icon?: string
+  iconPosition?: 'left' | 'right'
 }

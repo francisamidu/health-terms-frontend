@@ -1,26 +1,12 @@
 import React from 'react'
 import { HighlightProps } from 'types'
 
-const Highlight: React.FC<HighlightProps> = ({
-  className,
-  title,
-  subtitle
-}) => {
+const Highlight: React.FC<HighlightProps> = ({ className, title }) => {
   return (
     <div
-      className={`ml-3 text-xs leading-5 font-medium text-sky-600 dark:text-sky-400 bg-sky-400/10 rounded-full py-1 px-3 hidden xl:flex items-center hover:bg-sky-400/20 ${className}`}
+      className={`ml-3 text-xs leading-5 font-medium text-sky-600 dark:text-sky-400 bg-main-bluish rounded-full py-1 px-3 hidden xl:flex items-center ${className}`}
     >
       <strong className="font-semibold">{title}</strong>
-      <svg
-        width="2"
-        height="2"
-        fill="currentColor"
-        aria-hidden="true"
-        className="ml-2 text-sky-600 dark:text-sky-400/70"
-      >
-        <circle cx="1" cy="1" r="1"></circle>
-      </svg>
-      <span className="ml-2">{subtitle}</span>
       <svg
         width="3"
         height="6"

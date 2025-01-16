@@ -1,6 +1,6 @@
 export interface HighlightProps {
   className?: string
   title: string
-  icon?: string
+  icon?: JSX.Element
   iconPosition?: 'left' | 'right'
 }

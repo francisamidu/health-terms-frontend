@@ -1,4 +1,7 @@
 body {
   font-family: 'Rubik Variable', sans-serif;
   @apply text-main-darker;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }

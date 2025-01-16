@@ -1,5 +1,4 @@
 import React from 'react'
-import Highlight from 'components/Highlight'
 
 const images = [
   '/Gavi-logo.png',
@@ -10,16 +9,13 @@ const images = [
 ]
 const Clients: React.FC = () => {
   return (
-    <>
-      <div className="w-fit">
-        <Highlight title="Some of our Clients" icon={'users'} />
-      </div>
-      <div className="grid grid-cols-5 gap-3">
+    <section className="w-full mx-auto md:max-w-[1100px] my-10 px-8">
+      <div className="grid place-items-center grid-cols-5 gap-3">
         {images.map((image) => (
           <img className="h-auto w-[200px]" key={image} src={image} />
         ))}
       </div>
-    </>
+    </section>
   )
 }
 

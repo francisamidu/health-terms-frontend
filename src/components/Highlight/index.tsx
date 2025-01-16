@@ -1,4 +1,8 @@
-import { UserMultiple02Icon } from 'hugeicons-react'
+import {
+  BookEditIcon,
+  ShieldEnergyIcon,
+  UserMultiple02Icon
+} from 'hugeicons-react'
 import React from 'react'
 import { HighlightProps } from 'types'
 
@@ -9,6 +13,10 @@ const Highlight: React.FC<HighlightProps> = ({
 }) => {
   const _icon = () => {
     switch (icon) {
+      case 'feature':
+        return <BookEditIcon size={20} className="ml-2" />
+      case 'shield-energy':
+        return <ShieldEnergyIcon size={20} className="ml-2" />
       case 'users':
         return <UserMultiple02Icon size={20} className="ml-2" />
       default:

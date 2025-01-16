@@ -10,6 +10,7 @@ export default {
         main: '#074161',
         'main-bluish': '#05446c',
         'main-dark': '#0a3455',
+        'main-darker': '#072740',
         'main-dark-variant': '#0b374a',
         'main-accent': '#05446c',
         'main-variant': '#244c6c'

@@ -28,7 +28,7 @@ function Navbar() {
               Features
             </a>
             <a href="/about" className="text-main-bluish hover:text-main-dark">
-              About Us
+              About
             </a>
             <a
               href="/resources"
@@ -47,7 +47,7 @@ function Navbar() {
           {/* Actions */}
           <div className="hidden md:flex space-x-4">
             <Button
-              className="!bg-white text-main-dark border-[1px] border-main-dark hover:text-white hover:!bg-main-dark"
+              className="!bg-white !text-main-dark border-[1px] border-main-dark hover:!text-white hover:!bg-main-dark"
               text={'Sign in'}
               href={'/login'}
             />

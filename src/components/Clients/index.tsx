@@ -12,7 +12,7 @@ const Clients: React.FC = () => {
   return (
     <>
       <div className="w-fit">
-        <Highlight title="Some of our Clients" />
+        <Highlight title="Some of our Clients" icon={'users'} />
       </div>
       <div className="grid grid-cols-5 gap-3">
         {images.map((image) => (

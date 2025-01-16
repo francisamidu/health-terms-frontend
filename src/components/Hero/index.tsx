@@ -12,12 +12,7 @@ const Hero: React.FC = () => {
     <>
       <Navbar />
       <div className="w-full h-full flex flex-col justify-center items-center p-5 mt-28 ">
-        <Highlight
-          title={title}
-          className="mt-4"
-          icon={<UserMultiple02Icon size={25} />}
-          iconPosition="right"
-        />
+        <Highlight title={title} className="mt-4" />
       </div>
       <div className="my-4 flex flex-col justify-center items-center mx-auto md:w-3/4  text-center">
         <h1 className="font-medium text-7xl">

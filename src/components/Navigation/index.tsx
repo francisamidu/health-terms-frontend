@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import Button from 'components/Button'
+import { Moon02Icon } from 'hugeicons-react'
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <nav className="bg-white shadow-md">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="bg-white shadow-md fixed top-0 left-0 w-full">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="flex-shrink-0">
@@ -132,6 +133,10 @@ function Navbar() {
             </div>
           </div>
         )}
+        <Moon02Icon
+          className="absolute top-1/2 -right-3 transform -translate-y-1/2 hover:cursor-pointer"
+          size={25}
+        />
       </div>
     </nav>
   )

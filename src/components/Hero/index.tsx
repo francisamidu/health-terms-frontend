@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
   return (
     <>
       <Navbar />
-      <div className="w-full h-full flex flex-col justify-center items-center p-5">
+      <div className="w-full h-full flex flex-col justify-center items-center p-5 mt-28">
         <Highlight title={title} className="mt-4 bg-opacity-20" />
       </div>
       <div className="mt-5 flex flex-col justify-center items-center mx-auto md:w-3/4  text-center">

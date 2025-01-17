@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Highlight from 'components/Highlight'
 import Button from 'components/Button'
+import { UserAdd01Icon, Mail01Icon } from 'hugeicons-react'
 const Hero: React.FC = () => {
   const [title, _] = useState('The best health search tool is out now! 🚀')
   return (
@@ -20,11 +21,13 @@ const Hero: React.FC = () => {
       <div className="flex flex-row justify-center items-center">
         <Button
           className="mr-2 hover:!bg-main-bluish"
+          icon={<UserAdd01Icon size={15} />}
           text={'Get Started'}
           href={'/signup'}
         />
         <Button
           className="ml-2 !bg-white !text-main-dark border-[1px] border-main-dark hover:!text-white hover:!bg-main-bluish"
+          icon={<Mail01Icon size={15} />}
           text={'Contact Sales'}
           href={'/login'}
         />

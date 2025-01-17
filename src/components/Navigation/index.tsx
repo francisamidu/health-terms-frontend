@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Button from 'components/Button'
-import { Moon02Icon } from 'hugeicons-react'
+import { Moon02Icon, UserAdd01Icon, UserUnlock01Icon } from 'hugeicons-react'
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -49,11 +49,13 @@ function Navbar() {
           <div className="hidden md:flex space-x-4">
             <Button
               className="!bg-white !text-main-dark border-[1px] border-main-dark hover:!text-white hover:!bg-main-bluish"
+              icon={<UserUnlock01Icon size={15} />}
               text={'Sign in'}
               href={'/login'}
             />
             <Button
               className="hover:!bg-main-bluish"
+              icon={<UserAdd01Icon size={15} />}
               text={'Get Started'}
               href={'/signup'}
             />

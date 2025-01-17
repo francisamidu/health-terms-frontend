@@ -48,11 +48,15 @@ function Navbar() {
           {/* Actions */}
           <div className="hidden md:flex space-x-4">
             <Button
-              className="!bg-white !text-main-dark border-[1px] border-main-dark hover:!text-white hover:!bg-main-dark"
+              className="!bg-white !text-main-dark border-[1px] border-main-dark hover:!text-white hover:!bg-main-bluish"
               text={'Sign in'}
               href={'/login'}
             />
-            <Button text={'Get Started'} href={'/signup'} />
+            <Button
+              className="hover:!bg-main-bluish"
+              text={'Get Started'}
+              href={'/signup'}
+            />
           </div>
 
           {/* Mobile Menu Button */}

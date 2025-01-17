@@ -1,16 +1,10 @@
 import React, { useState } from 'react'
 import Highlight from 'components/Highlight'
-import Navbar from 'components/Navigation'
 import Button from 'components/Button'
-import { UserMultiple02Icon } from 'hugeicons-react'
-
 const Hero: React.FC = () => {
-  const [title, setTitle] = useState(
-    'The best health search tool is out now! 🚀'
-  )
+  const [title, _] = useState('The best health search tool is out now! 🚀')
   return (
-    <>
-      <Navbar />
+    <section>
       <div className="w-full h-full flex flex-col justify-center items-center p-5 mt-28 ">
         <Highlight title={title} className="mt-4" />
       </div>
@@ -24,14 +18,18 @@ const Hero: React.FC = () => {
         </h2>
       </div>
       <div className="flex flex-row justify-center items-center">
-        <Button className="mr-2" text={'Get Started'} href={'/signup'} />
         <Button
-          className="ml-2 !bg-white !text-main-dark border-[1px] border-main-dark hover:!text-white hover:!bg-main-dark"
+          className="mr-2 hover:!bg-main-bluish"
+          text={'Get Started'}
+          href={'/signup'}
+        />
+        <Button
+          className="ml-2 !bg-white !text-main-dark border-[1px] border-main-dark hover:!text-white hover:!bg-main-bluish"
           text={'Contact Sales'}
           href={'/login'}
         />
       </div>
-    </>
+    </section>
   )
 }
 export default Hero

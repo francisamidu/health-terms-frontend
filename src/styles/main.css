@@ -5,3 +5,8 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
+.landing-lazy-image-small div,
+.landing-lazy-image-small img {
+  height: 100%;
+}

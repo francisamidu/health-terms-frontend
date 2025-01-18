@@ -1,18 +1,38 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Button from '@/components/Button'
-
 import { Moon02Icon, UserAdd01Icon, UserUnlock01Icon } from 'hugeicons-react'
 import { useNavigate } from 'react-router-dom'
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
   const navigate = useNavigate()
+
   const redirect = (path: string) => {
     navigate(path)
   }
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 70) {
+        setIsScrolled(true)
+      } else {
+        setIsScrolled(false)
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
-    <nav className="bg-white shadow-md fixed top-0 left-0 w-full">
+    <nav
+      className={`${
+        isScrolled
+          ? 'fixed top-0 left-0 w-full shadow-md bg-white'
+          : 'static bg-transparent'
+      } transition-all duration-500`}
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="flex justify-between items-center">
           {/* Logo */}

@@ -29,7 +29,7 @@ function Navbar() {
     <nav
       className={`${
         isScrolled
-          ? 'fixed top-0 left-0 w-full shadow-md bg-white'
+          ? 'fixed top-0 left-0 w-full shadow-md bg-white z-30'
           : 'static bg-transparent'
       } transition-all duration-500`}
     >

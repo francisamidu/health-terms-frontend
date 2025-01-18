@@ -7,6 +7,7 @@ import Features from '@/components/Features'
 import Navbar from '@/components/Navigation'
 import FeatureList from '@/components/FeatureList'
 import Testimonials from '@/components/Testimonial'
+import Carousel from '@/components/Carousel'
 
 const Home: React.FC = () => {
   return (

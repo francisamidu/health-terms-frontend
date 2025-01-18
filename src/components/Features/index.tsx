@@ -5,7 +5,7 @@ import LazyImage from '@/components/LazyImage'
 const Features: React.FC = () => {
   return (
     <section className="w-full my-10 p-8 bg-gray-200 ">
-      <div className="mx-auto md:w-3/4">
+      <div className="mx-auto md:w-[85%]">
         <div className="my-4 flex flex-col justify-center  ">
           <div className="w-fit">
             <Highlight

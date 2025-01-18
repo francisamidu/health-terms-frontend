@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   font-family: 'Rubik Variable', sans-serif;
   @apply text-main-darker;
@@ -9,4 +13,10 @@ body {
 .landing-lazy-image-small div,
 .landing-lazy-image-small img {
   height: 100%;
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
 }

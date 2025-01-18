@@ -1,6 +1,6 @@
 import React from 'react'
-import Highlight from 'components/Highlight'
-import IconGenerator from 'components/IconGenerator'
+import Highlight from '@/components/Highlight'
+import IconGenerator from '@/components/IconGenerator'
 
 const featureList = [
   {
@@ -31,7 +31,10 @@ const FeatureList: React.FC = () => {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
         {featureList.map((feature) => (
-          <div className="bg-white shadow-md rounded-2xl p-6 flex flex-col justify-evenly">
+          <div
+            key={feature.title}
+            className="bg-white shadow-md rounded-2xl p-6 flex flex-col justify-evenly"
+          >
             <div className="w-12 h-12 bg-blue-100 text-blue-500 flex items-center justify-center rounded-md border-2 border-blue-200 mb-4">
               {<IconGenerator name={feature.icon} />}
             </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import Highlight from 'components/Highlight'
+import Highlight from '@/components/Highlight'
 
 const Privacy: React.FC = () => {
   return (

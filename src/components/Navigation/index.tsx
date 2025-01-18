@@ -1,9 +1,15 @@
 import { useState } from 'react'
-import Button from 'components/Button'
+import Button from '@/components/Button'
+
 import { Moon02Icon, UserAdd01Icon, UserUnlock01Icon } from 'hugeicons-react'
+import { useNavigate } from 'react-router-dom'
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
+  const navigate = useNavigate()
+  const redirect = (path: string) => {
+    navigate(path)
+  }
 
   return (
     <nav className="bg-white shadow-md fixed top-0 left-0 w-full">
@@ -51,13 +57,13 @@ function Navbar() {
               className="!bg-white !text-main-dark border-[1px] border-main-dark hover:!text-white hover:!bg-main-bluish"
               icon={<UserUnlock01Icon size={15} />}
               text={'Sign in'}
-              href={'/login'}
+              onClick={() => redirect('/login')}
             />
             <Button
               className="hover:!bg-main-bluish"
               icon={<UserAdd01Icon size={15} />}
               text={'Get Started'}
-              href={'/signup'}
+              onClick={() => redirect('/signup')}
             />
           </div>
 

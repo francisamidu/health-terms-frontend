@@ -1,8 +1,13 @@
 import React, { useState } from 'react'
-import Highlight from 'components/Highlight'
-import Button from 'components/Button'
+import Highlight from '@/components/Highlight'
+import Button from '@/components/Button'
 import { UserAdd01Icon, Mail01Icon } from 'hugeicons-react'
+import { useNavigate } from 'react-router-dom'
 const Hero: React.FC = () => {
+  const navigate = useNavigate()
+  const redirect = (path: string) => {
+    navigate(path)
+  }
   const [title, _] = useState('The best health search tool is out now! 🚀')
   return (
     <section>
@@ -23,13 +28,13 @@ const Hero: React.FC = () => {
           className="mr-2 hover:!bg-main-bluish"
           icon={<UserAdd01Icon size={15} />}
           text={'Get Started'}
-          href={'/signup'}
+          onClick={() => redirect('/signup')}
         />
         <Button
           className="ml-2 !bg-white !text-main-dark border-[1px] border-main-dark hover:!text-white hover:!bg-main-bluish"
           icon={<Mail01Icon size={15} />}
           text={'Contact Sales'}
-          href={'/login'}
+          onClick={() => redirect('/login')}
         />
       </div>
     </section>

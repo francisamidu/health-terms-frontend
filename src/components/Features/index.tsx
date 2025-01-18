@@ -1,6 +1,6 @@
 import React from 'react'
-import Highlight from 'components/Highlight'
-import LazyImage from 'components/LazyImage'
+import Highlight from '@/components/Highlight'
+import LazyImage from '@/components/LazyImage'
 
 const Features: React.FC = () => {
   return (
@@ -52,7 +52,7 @@ const Features: React.FC = () => {
               <LazyImage
                 alt="Easily Manage Schedules"
                 src="/dummy_600x400_000000_a4f9c1.png"
-                height="100%"
+                height={150}
                 width="auto"
               />
             </div>
@@ -80,7 +80,7 @@ const Features: React.FC = () => {
             <LazyImage
               alt="Fortify Financial Wellness"
               src="/xenity-health.webp"
-              height={200}
+              height={150}
               width="100%"
             />
             <h3 className="text-lg font-bold text-gray-800 mt-4">

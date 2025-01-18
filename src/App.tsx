@@ -10,6 +10,7 @@ import {
 import Dashboard from '@/pages/Dashboard'
 import Home from './pages/Home'
 import Signup from './pages/Signup'
+import NotFound from './pages/NotFound'
 
 const App: React.FC = () => {
   return (
@@ -23,7 +24,7 @@ const App: React.FC = () => {
           />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="*" element={<Navigate to="/" />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
     </>

@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
           className="ml-2 !bg-white !text-main-dark border-[1px] border-main-dark hover:!text-white hover:!bg-main-bluish"
           icon={<Mail01Icon size={15} />}
           text={'Contact Sales'}
-          onClick={() => redirect('/login')}
+          onClick={() => redirect('/contact-us')}
         />
       </div>
     </section>

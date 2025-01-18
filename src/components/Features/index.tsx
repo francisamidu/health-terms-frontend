@@ -23,12 +23,12 @@ const Features: React.FC = () => {
             and precision.
           </h2>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-8 gap-6  md:max-w-3/4 md:mx-auto">
+        <div className="grid grid-cols-1 grid-rows-[350px_350px]  lg:grid-cols-8 gap-6  md:max-w-3/4 md:mx-auto">
           <div className="lg:col-span-5 bg-white shadow-md rounded-lg p-6">
             <LazyImage
               alt="Easily Manage Schedules"
               src="/xenity-health.webp"
-              height="100"
+              height="100%"
               width="auto"
             />
             <h3 className="text-lg font-bold text-gray-800 mt-4">
@@ -52,7 +52,7 @@ const Features: React.FC = () => {
               <LazyImage
                 alt="Easily Manage Schedules"
                 src="/dummy_600x400_000000_a4f9c1.png"
-                height={150}
+                height="100%"
                 width="auto"
               />
             </div>
@@ -70,8 +70,12 @@ const Features: React.FC = () => {
               <LazyImage
                 alt="Streamline Communication"
                 src="/dummy_600x400_000000_a4f9c1.png"
-                height={150}
+                height="100%"
                 width="100%"
+                effect="opacity"
+                wrapperProps={{
+                  style: { transitionDelay: '1s' }
+                }}
               />
             </div>
           </div>
@@ -80,8 +84,12 @@ const Features: React.FC = () => {
             <LazyImage
               alt="Fortify Financial Wellness"
               src="/xenity-health.webp"
-              height={150}
+              height="auto"
               width="100%"
+              effect="opacity"
+              wrapperProps={{
+                style: { transitionDelay: '1s' }
+              }}
             />
             <h3 className="text-lg font-bold text-gray-800 mt-4">
               Fortify Financial Wellness

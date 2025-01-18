@@ -6,6 +6,7 @@ import Privacy from '@/components/Privacy'
 import Features from '@/components/Features'
 import Navbar from '@/components/Navigation'
 import FeatureList from '@/components/FeatureList'
+import Testimonials from '@/components/Testimonial'
 
 const Home: React.FC = () => {
   return (
@@ -17,6 +18,7 @@ const Home: React.FC = () => {
       <Privacy />
       <Features />
       <FeatureList />
+      <Testimonials />
     </>
   )
 }

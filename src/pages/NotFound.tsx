@@ -21,8 +21,8 @@ const NotFound: React.FC = () => {
         </div>
 
         <div className="space-y-4 flex flex-col items-center ">
-          <span className="text-6xl font-bold text-main-dark">404</span>
-          <p className="text-lg text-main-bluish mt-2">Page Not Found</p>
+          <span className="text-[15rem] font-bold text-main-dark">404</span>
+          <p className="text-lg text-main-bluish">Page Not Found</p>
           <p className="text-slate-600">
             Sorry, the page you{`’`}re looking for doesn{`’`}t exist or has been
             moved.

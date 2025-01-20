@@ -95,13 +95,13 @@ const Testimonials: React.FC = () => {
         </div>
         <button
           onClick={handlePrev}
-          className="absolute top-1/2 -left-6 transform -translate-y-1/2 bg-blue-500 text-white p-2 rounded-full shadow hover:bg-blue-600"
+          className="absolute top-1/2 -left-6 transform -translate-y-1/2 bg-main-bluish text-white p-2 rounded-full shadow hover:bg-blue-600"
         >
           &lt;
         </button>
         <button
           onClick={handleNext}
-          className="absolute top-1/2 -right-6 transform -translate-y-1/2 bg-blue-500 text-white p-2 rounded-full shadow hover:bg-blue-600"
+          className="absolute top-1/2 -right-6 transform -translate-y-1/2 bg-main-bluish text-white p-2 rounded-full shadow hover:bg-main-dark"
         >
           &gt;
         </button>
@@ -112,7 +112,7 @@ const Testimonials: React.FC = () => {
             key={index}
             onClick={() => handleDotClick(index)}
             className={`w-3 h-3 rounded-full ${
-              index === currentIndex ? 'bg-blue-500' : 'bg-gray-300'
+              index === currentIndex ? 'bg-main-bluish' : 'bg-gray-300'
             }`}
           ></button>
         ))}

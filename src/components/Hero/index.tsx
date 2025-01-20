@@ -11,7 +11,7 @@ const Hero: React.FC = () => {
   const [title, _] = useState('The best health search tool is out now! 🚀')
   return (
     <section>
-      <div className="w-full h-full flex flex-col justify-center items-center p-5 mt-28 ">
+      <div className="w-full h-full flex flex-col justify-center items-center p-5 mt-14 ">
         <Highlight title={title} className="mt-4" />
       </div>
       <div className="my-4 flex flex-col justify-center items-center mx-auto md:w-3/4  text-center">

@@ -29,9 +29,9 @@ function Navbar() {
     <nav
       className={`${
         isScrolled
-          ? 'fixed top-0 left-0 w-full shadow-md bg-white z-30'
+          ? 'fixed top-0 left-0 w-full shadow-md bg-white z-30 border-t-8 border-main-bluish'
           : 'static bg-transparent'
-      } transition-all duration-500`}
+      } transition-all duration-500  p-3`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="flex justify-between items-center">
@@ -39,9 +39,9 @@ function Navbar() {
           <div className="flex-shrink-0">
             <a href="/" className="text-2xl font-bold text-main-dark">
               <img
-                src="/healthco-logo.png"
+                src="/logo-no-background.svg"
                 alt="Health Illustration"
-                className="h-10 w-auto sm:h-8 lg:h-20"
+                className="h-2 w-auto sm:h-8 lg:h-7"
               ></img>
             </a>
           </div>
@@ -159,7 +159,7 @@ function Navbar() {
                   href="/signup"
                   className="block px-4 py-2 text-center text-white bg-blue-600 hover:bg-blue-700 rounded-md"
                 >
-                  Get Started
+                  Try for free
                 </a>
               </div>
             </div>

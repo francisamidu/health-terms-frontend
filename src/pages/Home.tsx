@@ -7,7 +7,6 @@ import Features from '@/components/Features'
 import Navbar from '@/components/Navigation'
 import FeatureList from '@/components/FeatureList'
 import Testimonials from '@/components/Testimonial'
-import Carousel from '@/components/Carousel'
 import NewsletterCTA from '@/components/Newsletter'
 
 const Home: React.FC = () => {

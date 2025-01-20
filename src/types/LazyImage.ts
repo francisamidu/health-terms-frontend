@@ -1,8 +1,7 @@
-import { LazyLoadImageProps } from 'react-lazy-load-image-component'
-
-export interface ImageProps extends LazyLoadImageProps {
+export type LazyLoadImageProps = React.ImgHTMLAttributes<HTMLImageElement> & {
   alt: string
-  height: string | number
   src: string
-  width: string | number
+  className?: string
+  loadInitially?: boolean
+  observerOptions?: IntersectionObserverInit
 }

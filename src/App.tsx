@@ -11,6 +11,7 @@ import Dashboard from '@/pages/Dashboard'
 import Home from './pages/Home'
 import Signup from './pages/Signup'
 import NotFound from './pages/NotFound'
+import VerifyToken from './pages/VerifyToken'
 
 const App: React.FC = () => {
   return (
@@ -24,6 +25,7 @@ const App: React.FC = () => {
           />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/verify-token" element={<VerifyToken />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>

@@ -7,7 +7,8 @@ import Features from '@/components/Features'
 import Navbar from '@/components/Navigation'
 import FeatureList from '@/components/FeatureList'
 import Testimonials from '@/components/Testimonial'
-import NewsletterCTA from '@/components/Newsletter'
+import CTA from '@/components/CTA'
+import Footer from '@/components/Footer'
 
 const Home: React.FC = () => {
   return (
@@ -20,7 +21,8 @@ const Home: React.FC = () => {
       <Features />
       <FeatureList />
       <Testimonials />
-      <NewsletterCTA />
+      <CTA />
+      <Footer />
     </>
   )
 }

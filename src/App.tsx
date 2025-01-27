@@ -12,6 +12,8 @@ import Home from './pages/Home'
 import Signup from './pages/Signup'
 import NotFound from './pages/NotFound'
 import VerifyToken from './pages/VerifyToken'
+import ChangeEmailForToken from './pages/ChangeEmail'
+import ResetPassword from './pages/ResetPassword'
 
 const App: React.FC = () => {
   return (
@@ -25,6 +27,8 @@ const App: React.FC = () => {
           />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/change-email" element={<ChangeEmailForToken />} />
+          <Route path="/reset-password" element={<ResetPassword />} />
           <Route path="/verify-token" element={<VerifyToken />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -1,3 +1,4 @@
+import AppButton from '@/components/Button'
 import React, { useState } from 'react'
 
 const VerifyTokenPage: React.FC = () => {
@@ -9,17 +10,20 @@ const VerifyTokenPage: React.FC = () => {
   }
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-white px-4">
-      <h1 className="text-2xl font-bold text-gray-800">Verify Your Identity</h1>
-      <p className="text-gray-600 mt-2 text-center max-w-md">
-        Enter the verification code sent to your email or phone to complete the
-        process.
-      </p>
-
+    <div className="flex min-h-screen flex-col items-center justify-center bg-white">
       <form
         onSubmit={handleSubmit}
-        className="mt-6 w-full max-w-md bg-white p-6 shadow-md rounded-lg"
+        className="border-2 border-gray-50  mt-6 w-full max-w-md bg-white p-6 shadow-md rounded-lg"
       >
+        <div className="text-center">
+          <h1 className="text-2xl font-bold text-gray-800">
+            Verify Your Identity
+          </h1>
+          <p className="text-gray-600 my-5 text-center max-w-md">
+            Enter the verification code sent to your email or phone to complete
+            the process.
+          </p>
+        </div>
         <div className="mb-4">
           <label
             htmlFor="token"
@@ -33,13 +37,13 @@ const VerifyTokenPage: React.FC = () => {
             placeholder="Enter your code"
             value={token}
             onChange={(e) => setToken(e.target.value)}
-            className="mt-1 w-full rounded-md border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+            className="mt-1 w-full border-2 rounded-md border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-blue-500 outline-none"
             required
           />
         </div>
 
         <div className="mb-4 text-right text-sm text-gray-600">
-          Didn’t receive a code?{' '}
+          Didn't receive a code?
           <button
             type="button"
             onClick={() => alert('Resending token...')}
@@ -49,12 +53,7 @@ const VerifyTokenPage: React.FC = () => {
           </button>
         </div>
 
-        <button
-          type="submit"
-          className="w-full rounded-md bg-blue-500 py-2 text-white text-sm font-medium hover:bg-blue-600"
-        >
-          Verify Code
-        </button>
+        <AppButton text="Verify Code" variant="form" />
       </form>
 
       <div className="mt-4 text-sm text-gray-600">

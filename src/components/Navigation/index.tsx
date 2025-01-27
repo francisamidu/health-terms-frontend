@@ -74,12 +74,12 @@ function Navbar() {
           {/* Actions */}
           <div className="hidden md:flex space-x-4">
             <Button
-              className="!bg-white !text-main-dark border-[1px] border-main-dark hover:!text-white hover:!bg-main-bluish"
               icon={<UserUnlock01Icon size={15} />}
               text={'Sign in'}
               onClick={() => redirect('/login')}
             />
             <Button
+              variant="outline"
               className="hover:!bg-main-bluish"
               icon={<UserAdd01Icon size={15} />}
               text={'Get Started'}

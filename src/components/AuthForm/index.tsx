@@ -14,7 +14,9 @@ const AuthForm: React.FC<AuthFormProps> = ({ type }) => {
     <form className="mt-6 w-full max-w-md border-2 border-gray-50 bg-white p-10 shadow-md rounded-lg">
       <div className="text-center">
         <h1 className="text-2xl font-bold text-gray-800">
-          Welcome to Medisync
+          {type == 'login'
+            ? ' Welcome back to Medisync'
+            : ' Welcome to Medisync'}
         </h1>
         <p className="text-gray-600 mt-2">Continue with</p>
       </div>
@@ -78,12 +80,7 @@ const AuthForm: React.FC<AuthFormProps> = ({ type }) => {
       )}
 
       {/* Submit Button */}
-      <button
-        type="submit"
-        className="w-full rounded-md bg-blue-500 py-2 text-white text-sm font-medium hover:bg-blue-600"
-      >
-        {isLogin ? 'Sign in' : 'Sign up'}
-      </button>
+      <AppButton text={isLogin ? 'Sign in' : 'Sign up'} variant="form" />
     </form>
   )
 }

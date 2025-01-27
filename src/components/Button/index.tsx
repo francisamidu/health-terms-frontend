@@ -1,18 +1,24 @@
 import React from 'react'
 import { ButtonProps } from '@/types'
 import { Button } from '@/components/ui/button'
+import { cn } from '@/lib/utils'
+import { buttonVariants } from '@/types/ButtonProps'
 
 const AppButton: React.FC<ButtonProps> = ({
   text,
-  onClick,
   icon,
   iconPosition = 'right',
-  className = ''
+  className = '',
+  variant,
+  size,
+  onClick,
+  ...props
 }) => {
   return (
     <Button
-      className={`bg-main-dark hover:bg-main-dark-variant focus:outline-none focus:ring-2 focus:ring-main-400 focus:ring-offset-2 focus:ring-offset-main-50 text-white h-11 px-6 rounded-xl w-full flex items-center justify-center gap-2 sm:w-auto dark:bg-sky-500 dark:highlight-white/20 dark:hover:bg-sky-400 transition-all duration-300 ${className}`}
+      className={cn(buttonVariants({ variant, size, className }))}
       onClick={onClick}
+      {...props}
     >
       {icon && iconPosition == 'left' ? <>{icon}</> : null}
       <span>{text}</span>
@@ -20,5 +26,7 @@ const AppButton: React.FC<ButtonProps> = ({
     </Button>
   )
 }
+
+Button.displayName = 'Button'
 
 export default AppButton

@@ -1,13 +1,13 @@
 import React from 'react'
-import AppButton from '../Button'
+import AppButton from '../../Button'
 import { GoogleIcon, Facebook01Icon } from 'hugeicons-react'
-import SocialButton from '../Button/SocialButton'
+import SocialButton from '../../Button/SocialButton'
 
 interface AuthFormProps {
   type: 'login' | 'signup'
 }
 
-const AuthForm: React.FC<AuthFormProps> = ({ type }) => {
+const Form: React.FC<AuthFormProps> = ({ type }) => {
   const isLogin = type === 'login'
 
   return (
@@ -85,4 +85,4 @@ const AuthForm: React.FC<AuthFormProps> = ({ type }) => {
   )
 }
 
-export default AuthForm
+export default Form

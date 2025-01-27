@@ -1,14 +1,18 @@
 import React from 'react'
-import { Facebook01Icon, TwitterIcon, Linkedin01Icon } from 'hugeicons-react'
+import {
+  Facebook02Icon as FacebookIcon,
+  TwitterIcon,
+  Linkedin02Icon as LinkedinIcon
+} from 'hugeicons-react'
 import AppButton from '../Button'
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-50 border-t  px-6 py-10  border-gray-200">
+    <footer className="bg-gray-50 border-t  px-6 py-10  border-gray-200 pb-0">
       <div className="container mx-auto grid md:grid-cols-4 gap-8 text-sm">
         <div>
-          <div className="w-24 h-24 rounded-md flex items-center justify-center text-lg font-bold">
-            <img src="/logo-no-background.svg" className="w-full h-auto" />
+          <div className="rounded-md flex items-center justify-start text-lg font-bold">
+            <img src="/logo-crop.svg" className="h-8 w-auto sm:h-8 lg:h-7" />
           </div>
           <p className="mt-4 text-gray-700">
             Medisync empowers healthcare professionals and institutions to
@@ -17,7 +21,7 @@ const Footer: React.FC = () => {
           </p>
         </div>
         <div>
-          <h3 className="font-semibold text-gray-800">Explore</h3>
+          <h3 className="text-xl font-semibold text-gray-800">Explore</h3>
           <ul className="mt-4 space-y-2 text-gray-600">
             <li>
               <a href="#about" className="hover:underline">
@@ -41,9 +45,8 @@ const Footer: React.FC = () => {
             </li>
           </ul>
         </div>
-
         <div>
-          <h3 className="font-semibold text-gray-800">Resources</h3>
+          <h3 className="text-xl font-semibold text-gray-800">Resources</h3>
           <ul className="mt-4 space-y-2 text-gray-600">
             <li>
               <a href="#encyclopedia" className="hover:underline">
@@ -67,8 +70,6 @@ const Footer: React.FC = () => {
             </li>
           </ul>
         </div>
-
-        {/* Newsletter and Contact */}
         <div>
           <h3 className="text-md uppercase font-bold text-gray-800">
             Stay Updated
@@ -90,23 +91,22 @@ const Footer: React.FC = () => {
             <p className="mt-2 text-gray-600">Email: support@medisync.com</p>
             <p className="text-gray-600">Phone: +1 800 123 4567</p>
             <div className="mt-4 flex space-x-4">
-              {/* Replace with social media icons */}
-              <div className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center">
-                F
-              </div>
-              <div className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center">
-                T
-              </div>
-              <div className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center">
-                L
-              </div>
+              <a href="https://facebook.com" className="text-gray-600">
+                <FacebookIcon size={25} />
+              </a>
+              <a href="https://facebook.com" className="text-gray-600">
+                <TwitterIcon size={25} />
+              </a>
+              <a href="https://facebook.com" className="text-gray-600">
+                <LinkedinIcon size={25} />
+              </a>
             </div>
           </div>
         </div>
       </div>
 
       <div className="border-t border-gray-200 mt-8">
-        <div className="container mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center text-gray-600">
+        <div className="container mx-auto p-6 flex flex-col md:flex-row justify-between items-center text-gray-600">
           <p>© 2025 Medisync. All rights reserved.</p>
           <p>
             <a href="#privacy-policy" className="hover:underline">

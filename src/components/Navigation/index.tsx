@@ -34,7 +34,6 @@ function Navbar() {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="flex justify-between items-center">
-          {/* Logo */}
           <div className="flex-shrink-0">
             <a href="/" className="text-2xl font-bold text-main-dark">
               <img
@@ -44,16 +43,14 @@ function Navbar() {
               ></img>
             </a>
           </div>
-
-          {/* Desktop Menu */}
           <div className="hidden md:flex space-x-6">
             <a
-              href="/features"
+              href="#features"
               className="text-main-bluish hover:text-main-dark"
             >
               Features
             </a>
-            <a href="/about" className="text-main-bluish hover:text-main-dark">
+            <a href="#about" className="text-main-bluish hover:text-main-dark">
               About
             </a>
             <a

@@ -1,10 +1,12 @@
 import AppButton from '@/components/Button'
 import { ArrowLeft01Icon } from 'hugeicons-react'
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router'
 
 const NotFound: React.FC = () => {
   const navigate = useNavigate()
+  const params = useParams()
+  console.log(params)
   const redirect = (path: string) => {
     navigate(path)
   }

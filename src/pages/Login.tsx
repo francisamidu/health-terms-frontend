@@ -8,7 +8,7 @@ const Login: React.FC = () => {
       <div className="mt-4 text-sm text-gray-600">
         <p>
           Not registered yet?{' '}
-          <a href="/signup" className="text-blue-500 hover:underline">
+          <a href="/auth/signup" className="text-blue-500 hover:underline">
             Sign up
           </a>
         </p>

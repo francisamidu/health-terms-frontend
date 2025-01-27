@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react'
 import Button from '@/components/Button'
 import { Moon02Icon, UserAdd01Icon, UserUnlock01Icon } from 'hugeicons-react'
-import { useNavigate } from 'react-router-dom'
-
+import { useNavigate } from 'react-router'
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
@@ -76,14 +75,14 @@ function Navbar() {
             <Button
               icon={<UserUnlock01Icon size={15} />}
               text={'Sign in'}
-              onClick={() => redirect('/login')}
+              onClick={() => redirect('/auth/login')}
             />
             <Button
               variant="outline"
               className="hover:!bg-main-bluish"
               icon={<UserAdd01Icon size={15} />}
               text={'Get Started'}
-              onClick={() => redirect('/signup')}
+              onClick={() => redirect('/auth/signup')}
             />
           </div>
 
@@ -150,13 +149,13 @@ function Navbar() {
               </a>
               <div className="space-y-4">
                 <a
-                  href="/login"
+                  href="/auth/login"
                   className="block text-gray-700 hover:text-main-dark"
                 >
                   Login
                 </a>
                 <a
-                  href="/signup"
+                  href="/auth/signup"
                   className="block px-4 py-2 text-center text-white bg-blue-600 hover:bg-blue-700 rounded-md"
                 >
                   Try for free

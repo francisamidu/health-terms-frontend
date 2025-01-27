@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Highlight from '@/components/Highlight'
 import Button from '@/components/Button'
 import { UserAdd01Icon, Mail01Icon } from 'hugeicons-react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router'
 const Hero: React.FC = () => {
   const navigate = useNavigate()
   const redirect = (path: string) => {
@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
           className="mr-2 hover:!bg-main-bluish"
           icon={<UserAdd01Icon size={15} />}
           text={'Get Started'}
-          onClick={() => redirect('/signup')}
+          onClick={() => redirect('/auth/signup')}
         />
         <Button
           className="ml-2 !bg-white !text-main-dark border-[1px] border-main-dark hover:!text-white hover:!bg-main-bluish"

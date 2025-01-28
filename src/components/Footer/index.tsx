@@ -94,9 +94,15 @@ const Footer: React.FC = () => {
             <AppButton className="!w-full mt-3 rounded-sm" text="Subscribe" />
           </form>
           <div className="mt-8">
-            <h4 className="font-semibold text-gray-800">Contact Us</h4>
-            <p className="mt-2 text-gray-600">Email: support@medisync.com</p>
-            <p className="text-gray-600">Phone: +1 800 123 4567</p>
+            <h4 className="font-semibold dark:text-gray-200 text-gray-800">
+              Contact Us
+            </h4>
+            <p className="mt-2 dark:text-gray-200 text-gray-600">
+              Email: support@medisync.com
+            </p>
+            <p className="dark:text-gray-200 text-gray-600">
+              Phone: +1 800 123 4567
+            </p>
             <div className="mt-4 flex space-x-4">
               <a href="https://facebook.com" className="text-gray-600">
                 <FacebookIcon size={25} />
@@ -112,8 +118,8 @@ const Footer: React.FC = () => {
         </div>
       </div>
 
-      <div className="border-t border-gray-200 mt-8">
-        <div className="container mx-auto p-6 flex flex-col md:flex-row justify-between items-center text-gray-600">
+      <div className="border-t border-gray-200 dark:border-gray-600 mt-8">
+        <div className="container mx-auto p-6 flex flex-col md:flex-row justify-between items-center text-gray-600 dark:text-gray-300">
           <p>© 2025 Medisync. All rights reserved.</p>
           <p>
             <a href="#privacy-policy" className="hover:underline">

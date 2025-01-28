@@ -9,7 +9,7 @@ import AppButton from '../Button'
 const Footer: React.FC = () => {
   return (
     <footer
-      className="bg-gray-50 border-t  px-6 py-10  border-gray-200 pb-0"
+      className="bg-gray-50 dark:bg-gray-800 border-t  px-6 py-10  border-gray-200 dark:border-gray-800 dark: pb-0"
       id="footer"
     >
       <div className="container mx-auto grid md:grid-cols-4 gap-8 text-sm">
@@ -17,15 +17,17 @@ const Footer: React.FC = () => {
           <div className="rounded-md flex items-center justify-start text-lg font-bold">
             <img src="/logo-crop.svg" className="h-8 w-auto sm:h-8 lg:h-7" />
           </div>
-          <p className="mt-4 text-gray-700">
+          <p className="mt-4 dark:text-gray-200 text-gray-700">
             Medisync empowers healthcare professionals and institutions to
             efficiently create, manage, and explore medical knowledge. Your
             go-to dashboard for medical technology and terms.
           </p>
         </div>
         <div>
-          <h3 className="text-xl font-semibold text-gray-800">Explore</h3>
-          <ul className="mt-4 space-y-2 text-gray-600">
+          <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-400">
+            Explore
+          </h3>
+          <ul className="mt-4 space-y-2 text-gray-300">
             <li>
               <a href="#about" className="hover:underline">
                 About Medisync
@@ -49,8 +51,10 @@ const Footer: React.FC = () => {
           </ul>
         </div>
         <div>
-          <h3 className="text-xl font-semibold text-gray-800">Resources</h3>
-          <ul className="mt-4 space-y-2 text-gray-600">
+          <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-400">
+            Resources
+          </h3>
+          <ul className="mt-4 space-y-2 text-gray-300">
             <li>
               <a href="#encyclopedia" className="hover:underline">
                 Medical Encyclopedia
@@ -74,10 +78,10 @@ const Footer: React.FC = () => {
           </ul>
         </div>
         <div>
-          <h3 className="text-md uppercase font-bold text-gray-800">
+          <h3 className="text-md uppercase font-bold text-gray-800 dark:text-gray-400">
             Stay Updated
           </h3>
-          <p className="text-gray-600 mt-2">
+          <p className="text-gray-300 mt-2">
             Subscribe to get the latest updates on Medisync and medical
             technology trends.
           </p>

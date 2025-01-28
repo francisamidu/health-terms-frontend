@@ -56,7 +56,7 @@ const Testimonials: React.FC = () => {
 
   return (
     <div
-      className="bg-gray-100 min-h-screen flex flex-col items-center space-y-8 py-12"
+      className="dark:bg-gray-800 bg-gray-100 min-h-screen flex flex-col items-center space-y-8 py-12"
       id="testimonials"
     >
       <div className="relative md:px-0 px-4 w-full max-w-4xl overflow-hidden">
@@ -69,7 +69,7 @@ const Testimonials: React.FC = () => {
           {testimonials.map(({ designation, image, name, quote }, index) => (
             <div
               key={index}
-              className="flex-shrink-0 w-full flex flex-col md:flex-row items-center bg-white shadow-md rounded-lg p-6 md:p-8 space-y-6 md:space-y-0 md:space-x-8"
+              className="flex-shrink-0 w-full flex flex-col md:flex-row items-center dark:bg-gray-600 bg-white shadow-md rounded-lg p-6 md:p-8 space-y-6 md:space-y-0 md:space-x-8"
             >
               <div className="relative flex-shrink-0">
                 <img
@@ -85,12 +85,14 @@ const Testimonials: React.FC = () => {
                   icon="comment"
                   className="w-fit !ml-0 mb-4"
                 />
-                <blockquote className="text-gray-700 text-lg md:text-xl font-medium leading-relaxed">
+                <blockquote className="dark:text-gray-200 text-gray-700 text-lg md:text-xl font-medium leading-relaxed">
                   “{quote}”
                 </blockquote>
                 <div className="mt-6">
-                  <p className="font-semibold text-gray-800">{name}</p>
-                  <p className="text-sm text-gray-500">{designation}</p>
+                  <p className="font-semibold dark:text-white text-gray-800">
+                    {name}
+                  </p>
+                  <p className="text-sm dark:text-gray-400">{designation}</p>
                 </div>
               </div>
             </div>

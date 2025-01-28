@@ -48,22 +48,24 @@ const Highlight: React.FC<HighlightProps> = ({
   const _icon = () => {
     switch (icon) {
       case 'comment':
-        return <Comment01Icon size={20} />
+        return <Comment01Icon className="dark:text-sky-400" size={20} />
       case 'feature':
-        return <BookEditIcon size={20} />
+        return <BookEditIcon className="dark:text-sky-400" size={20} />
       case 'shield-energy':
-        return <ShieldEnergyIcon size={20} />
+        return <ShieldEnergyIcon className="dark:text-sky-400" size={20} />
       case 'terms':
-        return <Chart01Icon className="text-normal text-main-dark" />
+        return (
+          <Chart01Icon className="text-normal text-main-dark dark:text-sky-400" />
+        )
       case 'users':
-        return <UserMultiple02Icon size={20} />
+        return <UserMultiple02Icon className="dark:text-sky-400" size={20} />
       default:
         return null
     }
   }
   return (
     <div
-      className={`ml-3 text-xs leading-5 font-medium  dark:text-sky-400 bg-main-bluish text-main-bluish rounded-full py-[0.4rem] px-[0.85rem] hidden xl:flex items-center bg-opacity-10 ${className}`}
+      className={`ml-3 text-xs leading-5 font-medium  dark:text-sky-400 dark:bg-main-light-variant bg-main-bluish text-main-bluish rounded-full py-[0.4rem] px-[0.85rem] hidden xl:flex items-center bg-opacity-10 ${className}`}
     >
       {_icon()}
       <strong className="font-semibold ml-2">{title}</strong>

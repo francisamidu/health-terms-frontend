@@ -1,6 +1,7 @@
 import React from 'react'
-import { IconProps } from 'types/Icon'
+
 import { File01Icon, Search01Icon } from 'hugeicons-react'
+import { IconProps } from '@/types/Icon'
 
 const IconGenerator: React.FC<IconProps> = ({ name }) => {
   const _icon = () => {

@@ -5,25 +5,21 @@
 html {
   scroll-behavior: smooth;
 }
-/* Dark mode styles */
-.dark body {
-  @apply bg-gray-800;
-  color: white;
-}
-@media (prefers-color-scheme: dark) {
-  body {
-    @apply bg-gray-800;
-    color: white;
-  }
-}
 
 body {
   font-family: 'Rubik Variable', sans-serif;
-  @apply text-main-darker;
+  @apply !text-main-darker;
+  @apply !bg-white;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
+}
+
+/* Dark mode styles */
+.dark body {
+  @apply !bg-gray-800;
+  color: white !important;
 }
 
 .landing-lazy-image-small div,

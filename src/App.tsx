@@ -3,12 +3,15 @@
 import React from 'react'
 import { BrowserRouter as Router } from 'react-router'
 import AppRouter from './components/Routing/Router'
+import { DarkModeProvider } from '@/contexts/ColorSchemeContext'
 
 const App: React.FC = () => {
   return (
-    <Router>
-      <AppRouter />
-    </Router>
+    <DarkModeProvider>
+      <Router>
+        <AppRouter />
+      </Router>
+    </DarkModeProvider>
   )
 }
 

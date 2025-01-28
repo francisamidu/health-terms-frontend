@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import Button from '@/components/Button'
 import {
   Moon02Icon,
@@ -7,14 +7,13 @@ import {
   UserUnlock01Icon
 } from 'hugeicons-react'
 import { useNavigate } from 'react-router'
+import { useDarkMode } from '@/contexts/ColorSchemeContext'
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
-  const [isDarkMode, setIsDarkMode] = useState(() => {
-    // Initialize dark mode state based on localStorage
-    return localStorage.getItem('darkMode') === 'true'
-  })
+  const { isDarkMode, toggleDarkMode } = useDarkMode()
+
   const navigate = useNavigate()
 
   const redirect = (path: string) => {
@@ -34,24 +33,13 @@ function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  useEffect(() => {
-    // Apply dark mode class to the document element
-    document.documentElement.classList.toggle('dark', isDarkMode)
-    // Save the preference to localStorage
-    localStorage.setItem('darkMode', isDarkMode.toString())
-  }, [isDarkMode])
-
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode)
-  }
-
   return (
     <nav
       className={`${
         isScrolled
-          ? 'fixed top-0 left-0 w-full shadow-md bg-white '
+          ? 'fixed top-0 left-0 w-full shadow-md border-t-8 border-main-bluish'
           : 'static bg-transparent'
-      } transition-all duration-500 p-3 dark:bg-gray-800 z-30 border-t-8 border-main-bluish`}
+      } transition-all duration-500 p-3 bg-white dark:bg-gray-800 z-30 `}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="flex justify-between items-center">
@@ -67,7 +55,6 @@ function Navbar() {
               />
             </a>
           </div>
-          {/* Desktop Menu */}
           <div className="hidden md:flex space-x-6">
             <a
               href="/features"
@@ -95,7 +82,6 @@ function Navbar() {
             </a>
           </div>
 
-          {/* Actions */}
           <div className="hidden md:flex space-x-4">
             <Button
               icon={<UserUnlock01Icon size={15} />}
@@ -111,7 +97,6 @@ function Navbar() {
             />
           </div>
 
-          {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -144,7 +129,6 @@ function Navbar() {
           </div>
         </div>
 
-        {/* Mobile Menu */}
         {isOpen && (
           <div className="md:hidden">
             <div className="space-y-4 mt-4">

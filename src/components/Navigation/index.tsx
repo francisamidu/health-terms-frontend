@@ -1,10 +1,20 @@
 import { useState, useEffect } from 'react'
 import Button from '@/components/Button'
-import { Moon02Icon, UserAdd01Icon, UserUnlock01Icon } from 'hugeicons-react'
+import {
+  Moon02Icon,
+  Sun01Icon as SunIcon,
+  UserAdd01Icon,
+  UserUnlock01Icon
+} from 'hugeicons-react'
 import { useNavigate } from 'react-router'
+
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    // Initialize dark mode state based on localStorage
+    return localStorage.getItem('darkMode') === 'true'
+  })
   const navigate = useNavigate()
 
   const redirect = (path: string) => {
@@ -24,44 +34,62 @@ function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  useEffect(() => {
+    // Apply dark mode class to the document element
+    document.documentElement.classList.toggle('dark', isDarkMode)
+    // Save the preference to localStorage
+    localStorage.setItem('darkMode', isDarkMode.toString())
+  }, [isDarkMode])
+
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode)
+  }
+
   return (
     <nav
       className={`${
         isScrolled
-          ? 'fixed top-0 left-0 w-full shadow-md bg-white z-30 border-t-8 border-main-bluish'
+          ? 'fixed top-0 left-0 w-full shadow-md bg-white '
           : 'static bg-transparent'
-      } transition-all duration-500  p-3`}
+      } transition-all duration-500 p-3 dark:bg-gray-800 z-30 border-t-8 border-main-bluish`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="flex justify-between items-center">
           <div className="flex-shrink-0">
-            <a href="/" className="text-2xl font-bold text-main-dark">
+            <a
+              href="/"
+              className="text-2xl font-bold text-main-dark dark:text-white"
+            >
               <img
-                src="/logo-no-background.svg"
+                src="/logo-crop.svg"
                 alt="Health Illustration"
-                className="h-2 w-auto sm:h-8 lg:h-7"
-              ></img>
+                className="h-5 w-auto sm:h-12 lg:h-7"
+              />
             </a>
           </div>
+          {/* Desktop Menu */}
           <div className="hidden md:flex space-x-6">
             <a
-              href="#features"
-              className="text-main-bluish hover:text-main-dark"
+              href="/features"
+              className="text-main-bluish hover:text-main-dark dark:text-white"
             >
               Features
             </a>
-            <a href="#about" className="text-main-bluish hover:text-main-dark">
+            <a
+              href="/about"
+              className="text-main-bluish hover:text-main-dark dark:text-white"
+            >
               About
             </a>
             <a
               href="/resources"
-              className="text-main-bluish hover:text-main-dark"
+              className="text-main-bluish hover:text-main-dark dark:text-white"
             >
               Resources
             </a>
             <a
               href="/contact"
-              className="text-main-bluish hover:text-main-dark"
+              className="text-main-bluish hover:text-main-dark dark:text-white"
             >
               Contact
             </a>
@@ -87,7 +115,7 @@ function Navbar() {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-main-dark focus:outline-none"
+              className="text-gray-700 hover:text-main-dark dark:text-white focus:outline-none"
             >
               <svg
                 className="w-6 h-6"
@@ -122,32 +150,32 @@ function Navbar() {
             <div className="space-y-4 mt-4">
               <a
                 href="/features"
-                className="block text-gray-700 hover:text-main-dark"
+                className="block text-gray-700 hover:text-main-dark dark:text-white"
               >
                 Features
               </a>
               <a
                 href="/about"
-                className="block text-gray-700 hover:text-main-dark"
+                className="block text-gray-700 hover:text-main-dark dark:text-white"
               >
-                About Us
+                About
               </a>
               <a
                 href="/resources"
-                className="block text-gray-700 hover:text-main-dark"
+                className="block text-gray-700 hover:text-main-dark dark:text-white"
               >
                 Resources
               </a>
               <a
                 href="/contact"
-                className="block text-gray-700 hover:text-main-dark"
+                className="block text-gray-700 hover:text-main-dark dark:text-white"
               >
                 Contact
               </a>
               <div className="space-y-4">
                 <a
                   href="/auth/login"
-                  className="block text-gray-700 hover:text-main-dark"
+                  className="block text-gray-700 hover:text-main-dark dark:text-white"
                 >
                   Login
                 </a>
@@ -161,10 +189,16 @@ function Navbar() {
             </div>
           </div>
         )}
-        <Moon02Icon
+        <button
+          onClick={toggleDarkMode}
           className="absolute top-1/2 -right-3 transform -translate-y-1/2 hover:cursor-pointer"
-          size={25}
-        />
+        >
+          {isDarkMode ? (
+            <SunIcon size={25} className="text-yellow-500" />
+          ) : (
+            <Moon02Icon size={25} className="text-gray-700 dark:text-white" />
+          )}
+        </button>
       </div>
     </nav>
   )

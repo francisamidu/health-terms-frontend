@@ -13,7 +13,8 @@ import FAQ from '@/pages/FAQ'
 import PrivacyPolicy from '@/pages/PrivacyPolicy'
 import Contact from '@/pages/Contact'
 
-import Layout from '../Auth/Layout'
+import AuthLayout from '../Auth/Layout'
+import Layout from '../Layout'
 import ProtectedRoute from '../ProtectedRoute'
 
 const AppRouter: React.FC = () => {
@@ -23,7 +24,7 @@ const AppRouter: React.FC = () => {
         <Route index element={<ProtectedRoute Component={Home} />} />
       </Route>
 
-      <Route path="auth" element={<Layout />}>
+      <Route path="auth" element={<AuthLayout />}>
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<Signup />} />
         <Route path="change-email" element={<ChangeEmailForToken />} />
@@ -32,11 +33,13 @@ const AppRouter: React.FC = () => {
       </Route>
 
       <Route index element={<Home />} />
-      {/* <Route path="terms-of-use" element={<Terms />} /> */}
-      <Route path="contact-us" element={<Contact />} />
-      <Route path="privacy-policy" element={<PrivacyPolicy />} />
-      <Route path="faq" element={<FAQ />} />
-      {/* <Route path="cookie-policy" element={<NotFound />} /> */}
+      <Route element={<Layout />}>
+        {/* <Route path="terms-of-use" element={<Terms />} /> */}
+        <Route path="contact-us" element={<Contact />} />
+        <Route path="privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="faq" element={<FAQ />} />
+        {/* <Route path="cookie-policy" element={<NotFound />} /> */}
+      </Route>
       <Route path="*" element={<NotFound />} />
     </Routes>
   )

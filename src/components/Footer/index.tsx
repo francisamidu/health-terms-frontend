@@ -8,7 +8,10 @@ import AppButton from '../Button'
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-50 border-t  px-6 py-10  border-gray-200 pb-0">
+    <footer
+      className="bg-gray-50 border-t  px-6 py-10  border-gray-200 pb-0"
+      id="footer"
+    >
       <div className="container mx-auto grid md:grid-cols-4 gap-8 text-sm">
         <div>
           <div className="rounded-md flex items-center justify-start text-lg font-bold">

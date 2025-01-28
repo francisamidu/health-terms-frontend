@@ -55,8 +55,11 @@ const Testimonials: React.FC = () => {
   }
 
   return (
-    <div className="bg-gray-100 min-h-screen flex flex-col items-center space-y-8 py-12">
-      <div className="relative w-full max-w-4xl overflow-hidden">
+    <div
+      className="bg-gray-100 min-h-screen flex flex-col items-center space-y-8 py-12"
+      id="testimonials"
+    >
+      <div className="relative md:px-0 px-4 w-full max-w-4xl overflow-hidden">
         <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{

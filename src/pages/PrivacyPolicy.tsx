@@ -1,7 +1,15 @@
+import { formatHumanReadableDate } from '@/utils/formatDateTime'
 import React from 'react'
 
+const readableDate = formatHumanReadableDate(new Date())
 const PrivacyPolicy: React.FC = () => (
   <div className="p-8">
+    <p>
+      <em>[Last updated: (</em>
+      <em>
+        <u>on {readableDate}</u>)]
+      </em>
+    </p>
     <h1 className="text-4xl font-bold mb-6">Privacy Policy</h1>
     <p className="mb-4">
       Your privacy is important to us. This policy outlines how we handle your
@@ -15,47 +23,47 @@ const PrivacyPolicy: React.FC = () => (
     <div className="mb-4">
       <h2 className="text-2xl font-semibold mb-4">General</h2>
       <p className="mb-4">
-        CENTIFIC GLOBAL SOLUTIONS, Inc. and its affiliates ("CENTIFIC" "we,"
+        MediSync GLOBAL SOLUTIONS, Inc. and its affiliates ("MediSync" "we,"
         "our," or "us") are committed to protecting your privacy. This privacy
         policy sets out how we collect, store, process, transfer, share, and use
         data that identifies or is associated with you ("personal information")
         and information regarding our use of cookies and similar technologies.
       </p>
       <p className="mb-4">
-        CENTIFIC operates a platform ("OneForma") used to recruit crowd
+        MediSync operates a platform ("MediSync") used to recruit crowd
         resources globally to support hosted projects, process work for
         different projects, and track resources working hours; users can
-        register via our websites under the https://www.oneforma.com domain (our
+        register via our websites under the https://www.medisync.com domain (our
         "Website") and browse, apply for published job opportunities, and take
         tasks from the online interface. ("Service").
       </p>
       <p className="mb-4">
-        This privacy policy applies to OneForma and all the tools that are part
+        This privacy policy applies to MediSync and all the tools that are part
         of it. Terms used in this privacy policy have the same meaning as in our
         Terms and Conditions, unless otherwise defined in this privacy policy.
       </p>
       <p className="mb-4">
-        Before accessing or using OneForma, please ensure that you have read and
+        Before accessing or using MediSync, please ensure that you have read and
         understood our collection, storage, use, and disclosure of your Personal
         Information as described in this privacy policy.
       </p>
       <p className="mb-4">
-        CENTIFIC is the data controller of the Personal Information we hold
-        about you. You can reach out to CENTIFIC at the address: 14980 NE 31st
+        MediSync is the data controller of the Personal Information we hold
+        about you. You can reach out to MediSync at the address: 14980 NE 31st
         Way, Suite 100, Redmond, WA, U.S. 98052; contact email:
-        data_protection@centific.com; phone: 1.425.233.8578.
+        data_protection@MediSync.com; phone: 1.425.233.8578.
       </p>
       <h2 className="text-2xl font-semibold mb-4">
         PERSONAL INFORMATION WE COLLECT ABOUT YOU AND HOW WE USE IT
       </h2>
       <p className="mb-4">
         We collect Personal Information about you when you voluntarily submit
-        information directly to us when using OneForma. This can include
+        information directly to us when using MediSync. This can include
         information you provide to us when you register for an account; fill in
-        a form on OneForma; create or edit your profile on OneForma; correspond
+        a form on MediSync; create or edit your profile on MediSync; correspond
         with us via the Website, phone, e-mail, or otherwise; subscribe to our
         mailing lists, newsletters, or other forms of marketing communications;
-        respond to surveys; or use some other feature of OneForma as available
+        respond to surveys; or use some other feature of MediSync as available
         from time to time.
       </p>
       <p className="mb-4">
@@ -71,8 +79,8 @@ const PrivacyPolicy: React.FC = () => (
       </p>
       <p className="mb-4">
         We also automatically collect Personal Information about you indirectly
-        about how you access and use OneForma and information about the device
-        you use to access OneForma.
+        about how you access and use MediSync and information about the device
+        you use to access MediSync.
       </p>
       <p className="mb-4">
         The table at Annex 2 sets out the categories of Personal Information we
@@ -183,7 +191,7 @@ const PrivacyPolicy: React.FC = () => (
         If you wish to exercise one of these rights, please contact us using the
         contact details at the end of this privacy policy (“Contact Us”). You
         may also review and edit the Personal Information you have submitted to
-        us by logging into your account on OneForma.
+        us by logging into your account on MediSync.
       </p>
       <p>
         You also have the right to lodge a complaint to the Supervisory

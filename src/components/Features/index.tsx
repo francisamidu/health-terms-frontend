@@ -4,7 +4,10 @@ import LazyImage from '@/components/LazyImage'
 
 const Features: React.FC = () => {
   return (
-    <section className="w-full my-10 p-8 bg-gray-200" id="features">
+    <section
+      className="w-full my-10 p-8 dark:bg-gray-800 bg-gray-200"
+      id="features"
+    >
       <div className="mx-auto md:w-[85%]">
         <div className="my-4 flex flex-col justify-center  ">
           <div className="w-fit">
@@ -14,7 +17,7 @@ const Features: React.FC = () => {
               icon="feature"
             />
           </div>
-          <h1 className="font-medium text-5xl my-2">
+          <h1 className="font-medium text-4xl md:text-5xl my-2">
             Unlock the Value of Intelligent Health Insights
           </h1>
           <h2 className="my-5 text-base w-3/4">
@@ -23,8 +26,8 @@ const Features: React.FC = () => {
             and precision.
           </h2>
         </div>
-        <div className="grid grid-cols-1 grid-rows-[350px_350px] lg:grid-cols-8 gap-6  md:max-w-3/4 md:mx-auto">
-          <div className="lg:col-span-5 bg-white shadow-md rounded-lg p-6 flex flex-col justify-items-stretch">
+        <div className="grid grid-cols-1 grid-rows-[350px_350px] lg:grid-cols-8 gap-6 md:max-w-3/4 md:mx-auto">
+          <div className="lg:col-span-5 bg-white dark:bg-gray-800 shadow-md rounded-lg p-6 flex flex-col justify-items-stretch">
             <div className="flex-1 w-full overflow-hidden">
               <LazyImage
                 alt="Easily Manage Schedules"
@@ -33,22 +36,22 @@ const Features: React.FC = () => {
               />
             </div>
             <div className="flex-[0.5]">
-              <h3 className="text-lg font-bold text-gray-800 mt-4">
+              <h3 className="text-lg font-bold text-gray-800 dark:text-white mt-4">
                 Easily Manage Schedules And Appointments
               </h3>
-              <p className="text-gray-600 mt-2">
+              <p className="text-gray-600 dark:text-gray-300 mt-2">
                 Organize caregiver schedules and balance workloads with a
                 drag-and-drop Calendar and Workload view.
               </p>
             </div>
           </div>
 
-          <div className="lg:col-span-3 bg-white shadow-md rounded-xl p-6 flex flex-col justify-items-stretch">
+          <div className="lg:col-span-3 bg-white dark:bg-gray-800 shadow-md rounded-xl p-6 flex flex-col justify-items-stretch">
             <div className="flex-[0.5]">
-              <h3 className="text-lg font-bold text-gray-800">
+              <h3 className="text-lg font-bold text-gray-800 dark:text-white">
                 Manage Patients With Efficiency
               </h3>
-              <p className="text-sm text-gray-600 mt-1">
+              <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
                 Automate appointment scheduling and track patient info with
                 custom fields.
               </p>
@@ -62,12 +65,12 @@ const Features: React.FC = () => {
             </div>
           </div>
 
-          <div className="lg:col-span-3 bg-white shadow-md rounded-xl p-6 flex flex-col justify-items-stretch">
+          <div className="lg:col-span-3 bg-white dark:bg-gray-800 shadow-md rounded-xl p-6 flex flex-col justify-items-stretch">
             <div className="flex-[0.5]">
-              <h3 className="text-lg font-bold text-gray-800">
+              <h3 className="text-lg font-bold text-gray-800 dark:text-white">
                 Streamline Communication
               </h3>
-              <p className="text-sm text-gray-600 mt-1">
+              <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
                 Create real-time cross-departmental communication channels
                 directly.
               </p>
@@ -81,7 +84,7 @@ const Features: React.FC = () => {
             </div>
           </div>
 
-          <div className="lg:col-span-5 bg-white shadow-md rounded-xl p-6 flex flex-col justify-items-stretch">
+          <div className="lg:col-span-5 bg-white dark:bg-gray-800 shadow-md rounded-xl p-6 flex flex-col justify-items-stretch">
             <div className="flex-1 w-full overflow-hidden">
               <LazyImage
                 alt="Fortify Financial Wellness"
@@ -90,10 +93,10 @@ const Features: React.FC = () => {
               />
             </div>
             <div className="flex-[0.5]">
-              <h3 className="text-lg font-bold text-gray-800 mt-4">
+              <h3 className="text-lg font-bold text-gray-800 dark:text-white mt-4">
                 Fortify Financial Wellness
               </h3>
-              <p className="text-gray-600 mt-2">
+              <p className="text-gray-600 dark:text-gray-300 mt-2">
                 Unlock the power of comprehensive income management to ensure
                 financial transparency and efficiency.
               </p>

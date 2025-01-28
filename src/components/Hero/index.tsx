@@ -11,14 +11,17 @@ const Hero: React.FC = () => {
   const [title, _] = useState('The best health search tool is out now! 🚀')
   return (
     <section>
-      <div className="w-full h-full flex flex-col justify-center items-center p-5 mt-14 ">
+      <div
+        className="w-full h-full flex flex-col justify-center items-center p-5 mt-5 md:mt-14"
+        id="hero"
+      >
         <Highlight title={title} className="mt-4" />
       </div>
-      <div className="my-4 flex flex-col justify-center items-center mx-auto md:w-3/4  text-center">
-        <h1 className="font-medium text-7xl">
+      <div className="my-4 flex flex-col justify-center items-center mx-auto md:w-3/4 px-4 md:px-0 text-center">
+        <h1 className="font-medium md:text-7xl text-4xl">
           Discover and Understand Medical Terms
         </h1>
-        <h2 className="my-5 text-base w-1/2">
+        <h2 className="my-5 text-base w=3/4 md:w-1/2">
           Your trusted resource for concise definitions of medical terms with
           references to peer-reviewed journals.
         </h2>

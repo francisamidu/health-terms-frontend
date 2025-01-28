@@ -3,8 +3,11 @@ import AppButton from '../Button'
 
 const CTA: React.FC = () => {
   return (
-    <div className="flex justify-center items-center p-10 bg-[#80b3c6]">
-      <div className="p-8 max-w-xl w-full text-center">
+    <div
+      className="flex justify-center items-center p-10 bg-[#80b3c6]"
+      id="cta"
+    >
+      <div className="md:p-8 md:max-w-xl w-full text-center">
         <h2 className="text-3xl font-bold mb-4">Join for free today.</h2>
         <p className="mb-6">
           Empower your team with the ultimate health terms dashboard that
@@ -14,7 +17,7 @@ const CTA: React.FC = () => {
           <input
             type="email"
             placeholder="Work email."
-            className="flex-1 px-4 py-2 h-11 outline-none"
+            className="flex-1 px-4 py-2 md:h-11 h-10 outline-none"
           />
           <AppButton className="!rounded-none" text="Create account" />
         </div>

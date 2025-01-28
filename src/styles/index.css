@@ -5,6 +5,11 @@
 html {
   scroll-behavior: smooth;
 }
+/* Dark mode styles */
+.dark body {
+  @apply bg-gray-800;
+  color: white;
+}
 
 body {
   font-family: 'Rubik Variable', sans-serif;

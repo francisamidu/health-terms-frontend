@@ -21,7 +21,7 @@ const featureList = [
 ]
 const FeatureList: React.FC = () => {
   return (
-    <section className="p-6 md:p-12 bg-gray-50">
+    <section className="p-6 md:p-12 bg-gray-50" id="feature-list">
       <div className="md:w-[85%] mx-auto ">
         <div className="my-4 flex flex-col justify-center  ">
           <div className="w-fit">
@@ -31,7 +31,7 @@ const FeatureList: React.FC = () => {
               icon="terms"
             />
           </div>
-          <h1 className="font-medium text-5xl my-2">
+          <h1 className="font-medium text-4xl md:text-5xl my-2">
             Manage all your medical terms in one place.
           </h1>
           <h2 className="my-5 text-base w-3/4">

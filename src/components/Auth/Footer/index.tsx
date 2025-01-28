@@ -10,15 +10,15 @@ const Footer: React.FC = () => {
         <div className="my-4">
           <a href="/" className="hover:underline mr-2">
             Home
-          </a>{' '}
+          </a>
           |
           <a href="/privacy-policy" className="mx-2 hover:underline">
             Privacy Policy
-          </a>{' '}
+          </a>
           |
           <a href="/terms-of-use" className="mx-2 hover:underline">
             Terms of Use
-          </a>{' '}
+          </a>
           |
           <a href="/cookie-policy" className="ml-2 hover:underline">
             Cookie Policy

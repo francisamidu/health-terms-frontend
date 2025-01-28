@@ -32,7 +32,7 @@ const Form: React.FC<AuthFormProps> = ({ type }) => {
       <div className="mb-4">
         <label
           htmlFor="email"
-          className="block text-sm font-medium text-gray-700"
+          className="block text-sm font-medium text-gray-700 dark:text-gray-300"
         >
           Email
         </label>
@@ -40,15 +40,15 @@ const Form: React.FC<AuthFormProps> = ({ type }) => {
           type="email"
           id="email"
           placeholder="Enter your email"
-          className="dark:text-gray-300 mt-1 w-full rounded-md border-2 border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-blue-500 outline-none"
+          className="dark:text-gray-800 mt-1 w-full rounded-md border-2 border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-blue-500 outline-none"
           required
         />
       </div>
 
-      <div className="mb-4">
+      <div className={isLogin ? 'mb-4' : 'mb-8'}>
         <label
           htmlFor="password"
-          className="block text-sm font-medium text-gray-700"
+          className="block text-sm font-medium text-gray-700 dark:text-gray-300"
         >
           Password
         </label>
@@ -56,13 +56,13 @@ const Form: React.FC<AuthFormProps> = ({ type }) => {
           type="password"
           id="password"
           placeholder="Enter your password"
-          className="dark:text-gray-300 mt-1 w-full rounded-md border-2  border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-blue-500 outline-none"
+          className="dark:text-gray-800 mt-1 w-full rounded-md border-2  border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-blue-500 outline-none"
           required
         />
       </div>
 
       {isLogin && (
-        <div className="mb-4 flex justify-between items-center text-sm text-gray-600">
+        <div className="my-5 flex justify-between items-center text-sm text-gray-600">
           <div>
             <input
               type="checkbox"

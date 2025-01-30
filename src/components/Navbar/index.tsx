@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react'
-import { Moon02Icon } from 'hugeicons-react'
+import { Moon02Icon, Sun01Icon as SunIcon } from 'hugeicons-react'
+import { useDarkMode } from '@/contexts/ColorSchemeContext'
 
 function Navbar() {
+  const { isDarkMode, toggleDarkMode } = useDarkMode()
   const [isScrolled, setIsScrolled] = useState(false)
 
   useEffect(() => {
@@ -34,22 +36,41 @@ function Navbar() {
           <div className="hidden md:flex space-x-6">
             <a
               href="/privacy-policy"
-              className="text-main-bluish hover:text-main-dark"
+              className={`${
+                isScrolled
+                  ? 'dark:text-gray-800 dark:hover:text-gray-500 text-main-bluish hover:text-main-dark'
+                  : 'dark:text-gray-300 dark:hover:text-gray-500 text-main-bluish hover:text-main-dark'
+              }`}
             >
               Privacy Policy
             </a>
             <a
               href="/terms-of-use"
-              className="text-main-bluish hover:text-main-dark"
+              className={`${
+                isScrolled
+                  ? 'dark:text-gray-800 dark:hover:text-gray-500 text-main-bluish hover:text-main-dark'
+                  : 'dark:text-gray-300 dark:hover:text-gray-500 text-main-bluish hover:text-main-dark'
+              }`}
             >
               Terms of Use
             </a>
-            <a href="/faq" className="text-main-bluish hover:text-main-dark">
+            <a
+              href="/faq"
+              className={`${
+                isScrolled
+                  ? 'dark:text-gray-800 dark:hover:text-gray-500 text-main-bluish hover:text-main-dark'
+                  : 'dark:text-gray-300 dark:hover:text-gray-500 text-main-bluish hover:text-main-dark'
+              }`}
+            >
               FAQ
             </a>
             <a
               href="/cookie-policy"
-              className="text-main-bluish hover:text-main-dark"
+              className={`${
+                isScrolled
+                  ? 'dark:text-gray-800 dark:hover:text-gray-500 text-main-bluish hover:text-main-dark'
+                  : 'dark:text-gray-300 dark:hover:text-gray-500 text-main-bluish hover:text-main-dark'
+              }`}
             >
               Cookie Policy
             </a>
@@ -75,10 +96,16 @@ function Navbar() {
             </button>
           </div>
         </div>
-        <Moon02Icon
+        <button
+          onClick={toggleDarkMode}
           className="absolute top-1/2 -right-3 transform -translate-y-1/2 hover:cursor-pointer"
-          size={25}
-        />
+        >
+          {isDarkMode ? (
+            <SunIcon size={25} className="text-yellow-500" />
+          ) : (
+            <Moon02Icon size={25} className="text-gray-700 dark:text-white" />
+          )}
+        </button>
       </div>
     </nav>
   )

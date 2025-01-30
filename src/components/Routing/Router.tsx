@@ -3,7 +3,7 @@ import React from 'react'
 
 import ChangeEmailForToken from '@/pages/ChangeEmail'
 import Dashboard from '@/pages/Dashboard'
-import Home from '@/pages/Home'
+import Home from '@/components/Dashboard/Home'
 import Login from '@/pages/Login'
 import NotFound from '@/pages/NotFound'
 import ResetPassword from '@/pages/ResetPassword'

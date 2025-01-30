@@ -112,7 +112,7 @@ const SupportCenter: React.FC = () => {
         <div className="flex flex-col mb-12">
           {articles.map((article, index) => (
             <React.Fragment key={index}>
-              <h3 className="text-md font-semibold my-4">{article.category}</h3>
+              <h3 className="text-md font-semibold my-8">{article.category}</h3>
               {article.items.map((item, index) => (
                 <Accordion
                   type="single"

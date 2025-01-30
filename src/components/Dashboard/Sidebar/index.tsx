@@ -5,10 +5,10 @@ import {
   Search01Icon as SearchIcon,
   Folder01Icon as FolderIcon,
   File01Icon as FileTextIcon,
-  ChartBarLineIcon as BarChartIcon,
-  FavouriteIcon as FavoriteIcon,
+  ChartIncreaseIcon as BarChartIcon,
+  FavouriteIcon,
   Settings01Icon as SettingsIcon,
-  Logout01Icon as LogOutIcon,
+  Logout04Icon as LogOutIcon,
   SidebarLeftIcon
 } from 'hugeicons-react'
 import {
@@ -34,7 +34,7 @@ const Sidebar: React.FC = () => {
       href: '#',
       label: 'Favorites',
       badge: 120,
-      icon: <FavoriteIcon size={20} />
+      icon: <FavouriteIcon size={20} />
     },
     { href: '#', label: 'Profile', icon: <UserIcon size={20} /> },
     { href: '#', label: 'Settings', icon: <SettingsIcon size={20} /> }

@@ -2,7 +2,8 @@ import React from 'react'
 import {
   Notification03Icon as BellIcon,
   Search01Icon as SearchIcon,
-  Calendar02Icon as CalendarIcon
+  Calendar02Icon as CalendarIcon,
+  ArrowDown01Icon as ArrowDownIcon
 } from 'hugeicons-react'
 
 import { format } from 'date-fns'
@@ -20,14 +21,13 @@ const DashboardHeader: React.FC = () => {
   const [date, setDate] = React.useState<Date>()
   return (
     <>
-      <div className="flex items-center justify-end bg-white w-full border-b-2 border-gray-100 fixed top-0 left-0 z-10">
-        <div className="grid grid-cols-[30%_50%_20%] ml-2 p-3">
-          <h1 className="text-2xl font-normal ml-2 mb-2">Welcome, Francis</h1>
-          <div className="relative">
+      <div className="bg-white w-full border-b-2 border-gray-100 fixed top-0 left-0 pl-[270px] z-[5]">
+        <div className="ml-2 p-3 flex flex-row items-center justify-between">
+          <div className="relative w-3/5">
             <input
               type="text"
               placeholder="Search medical terms..."
-              className="pl-10 pr-4 py-2 border w-full rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="pl-10 pr-4 py-2 border w-4/5 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <SearchIcon
               size={18}
@@ -38,14 +38,16 @@ const DashboardHeader: React.FC = () => {
             <Popover>
               <PopoverTrigger asChild>
                 <Button
-                  variant={'outline'}
+                  variant={'ghost'}
                   className={cn(
-                    'w-[280px] justify-start text-left font-normal',
-                    !date && 'text-muted-foreground'
+                    date
+                      ? 'w-[200px] justify-start items-center text-left font-normal'
+                      : 'w-fit justify-start items-center text-left font-normal text-muted-foreground'
                   )}
                 >
                   <CalendarIcon className="mr-2 h-4 w-4" />
                   {date ? format(date, 'PPP') : null}
+                  <ArrowDownIcon className="h-4 w-4" />
                 </Button>
               </PopoverTrigger>
               <PopoverContent className="w-auto p-0">

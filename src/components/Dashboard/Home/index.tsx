@@ -4,9 +4,12 @@ import React from 'react'
 const Home: React.FC = () => {
   return (
     <div className="p-6 bg-gray-50 min-h-screen mt-16">
-      <h1 className="text-3xl font-normal mb-6 text-gray-800">
-        {formatHumanReadableDate(new Date())}
-      </h1>
+      <div className="flex flex-col">
+        <h1 className="text-2xl font-normal mb-2">Welcome, Francis</h1>
+        <h2 className="text-normal font-normal mb-6">
+          {formatHumanReadableDate(new Date())}
+        </h2>
+      </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
         {/* Key Metrics */}

@@ -9,7 +9,7 @@ import NotFound from '@/pages/NotFound'
 import ResetPassword from '@/pages/ResetPassword'
 import Signup from '@/pages/Signup'
 import VerifyToken from '@/pages/VerifyToken'
-import FAQ from '@/pages/FAQ'
+import SupportCenter from '@/pages/SupportCenter'
 import PrivacyPolicy from '@/pages/PrivacyPolicy'
 import Contact from '@/pages/Contact'
 
@@ -37,7 +37,7 @@ const AppRouter: React.FC = () => {
         {/* <Route path="terms-of-use" element={<Terms />} /> */}
         <Route path="contact-us" element={<Contact />} />
         <Route path="privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="faq" element={<FAQ />} />
+        <Route path="support-center" element={<SupportCenter />} />
         {/* <Route path="cookie-policy" element={<NotFound />} /> */}
       </Route>
       <Route path="*" element={<NotFound />} />

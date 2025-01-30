@@ -12,16 +12,16 @@ const ResetPassword: React.FC = () => {
   }
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-white">
+    <div className="flex min-h-screen flex-col items-center justify-center bg-white dark:bg-gray-800">
       <form
         onSubmit={handleSubmit}
-        className="border-2 border-gray-50 mt-6 w-full max-w-md bg-white p-6 shadow-md rounded-lg"
+        className="border-2 border-gray-50 dark:border-gray-700 mt-6 w-full max-w-md bg-white dark:bg-gray-700 p-6 shadow-md rounded-lg"
       >
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-gray-800">
+          <h1 className="text-2xl font-bold text-gray-800 dark:text-white">
             Reset Your Password
           </h1>
-          <p className="text-gray-600 my-5 text-center max-w-md">
+          <p className="text-gray-600 dark:text-gray-300 my-5 text-center max-w-md">
             Enter your email, verification code, and new password to reset your
             account.
           </p>
@@ -81,7 +81,7 @@ const ResetPassword: React.FC = () => {
           />
         </div>
 
-        <div className="mb-4 text-right text-sm text-gray-600">
+        <div className="mb-4 text-right text-sm text-gray-600 dark:text-gray-300">
           Didn't receive a code?{' '}
           <button
             type="button"

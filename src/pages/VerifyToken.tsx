@@ -10,16 +10,16 @@ const VerifyTokenPage: React.FC = () => {
   }
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-white">
+    <div className="flex min-h-screen flex-col items-center justify-center bg-white dark:bg-gray-800">
       <form
         onSubmit={handleSubmit}
-        className="border-2 border-gray-50  mt-6 w-full max-w-md bg-white p-6 shadow-md rounded-lg"
+        className="border-2 border-gray-50 dark:border-gray-700  mt-6 w-full max-w-md bg-white dark:bg-gray-700 p-6 shadow-md rounded-lg"
       >
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-gray-800">
+          <h1 className="text-2xl font-bold dark:text-white text-gray-800">
             Verify Your Identity
           </h1>
-          <p className="text-gray-600 my-5 text-center max-w-md">
+          <p className="dark:text-gray-300 text-gray-600 my-5 text-center max-w-md">
             Enter the verification code sent to your email or phone to complete
             the process.
           </p>
@@ -27,7 +27,7 @@ const VerifyTokenPage: React.FC = () => {
         <div className="mb-4">
           <label
             htmlFor="token"
-            className="block text-sm font-medium text-gray-700"
+            className="block text-sm font-medium dark:text-gray-300 text-gray-700"
           >
             Verification Code
           </label>
@@ -42,7 +42,7 @@ const VerifyTokenPage: React.FC = () => {
           />
         </div>
 
-        <div className="mb-4 text-right text-sm text-gray-600">
+        <div className="mb-4 text-right text-sm dark:text-gray-300 text-gray-600">
           Didn't receive a code?
           <button
             type="button"
@@ -57,7 +57,7 @@ const VerifyTokenPage: React.FC = () => {
       </form>
 
       <div className="mt-4 text-sm text-gray-600">
-        <p>
+        <p className="dark:text-gray-300">
           Need help?{' '}
           <a href="/support" className="text-blue-500 hover:underline">
             Contact Support

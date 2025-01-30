@@ -5,11 +5,23 @@ import {
   Calendar02Icon as CalendarIcon
 } from 'hugeicons-react'
 
+import { format } from 'date-fns'
+
+import { cn } from '@/lib/utils'
+import { Button } from '@/components/ui/button'
+import { Calendar } from '@/components/ui/calendar'
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger
+} from '@/components/ui/popover'
+
 const DashboardHeader: React.FC = () => {
+  const [date, setDate] = React.useState<Date>()
   return (
     <>
-      <div className="flex items-center justify-between bg-white w-full border-b-2 border-gray-100">
-        <div className="grid grid-cols-[30%_50%_20%] ml-2 w-full p-3">
+      <div className="flex items-center justify-end bg-white w-full border-b-2 border-gray-100 fixed top-0 left-0 z-10">
+        <div className="grid grid-cols-[30%_50%_20%] ml-2 p-3">
           <h1 className="text-2xl font-normal ml-2 mb-2">Welcome, Francis</h1>
           <div className="relative">
             <input
@@ -23,10 +35,28 @@ const DashboardHeader: React.FC = () => {
             />
           </div>
           <div className="flex flex-row items-center justify-end mr-3">
-            <CalendarIcon
-              size={24}
-              className="text-gray-600 hover:text-blue-500 space-x-2 hover:cursor-pointer"
-            />
+            <Popover>
+              <PopoverTrigger asChild>
+                <Button
+                  variant={'outline'}
+                  className={cn(
+                    'w-[280px] justify-start text-left font-normal',
+                    !date && 'text-muted-foreground'
+                  )}
+                >
+                  <CalendarIcon className="mr-2 h-4 w-4" />
+                  {date ? format(date, 'PPP') : null}
+                </Button>
+              </PopoverTrigger>
+              <PopoverContent className="w-auto p-0">
+                <Calendar
+                  mode="single"
+                  selected={date}
+                  onSelect={setDate}
+                  initialFocus
+                />
+              </PopoverContent>
+            </Popover>
             <BellIcon
               size={24}
               className="text-gray-600 hover:text-blue-500 mx-4 hover:cursor-pointer"

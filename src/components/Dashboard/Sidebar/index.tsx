@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import {
   Home01Icon as HomeIcon,
   UserIcon,
@@ -17,28 +17,65 @@ import {
   TooltipProvider,
   TooltipTrigger
 } from '@/components/ui/tooltip'
-
+import { Link, useLocation } from 'react-router'
 import { useAppInformation } from '@/contexts/AppInformationContext'
 
 const Sidebar: React.FC = () => {
   const { name } = useAppInformation()
-  const [activeLink, setActiveLink] = useState<string>('Dashboard')
+  const location = useLocation()
+  const [activeLink, setActiveLink] = useState<string>('')
   const [isCollapsed, setIsCollapsed] = useState<boolean>(false)
+
   const links = [
-    { href: '#', label: 'Dashboard', icon: <HomeIcon size={20} /> },
-    { href: '#', label: 'Terminology', icon: <FileTextIcon size={20} /> },
-    { href: '#', label: 'Search Terms', icon: <SearchIcon size={20} /> },
-    { href: '#', label: 'Categories', icon: <FolderIcon size={20} /> },
-    { href: '#', label: 'Insights', icon: <BarChartIcon size={20} /> },
+    { href: '/dashboard', label: 'Overview', icon: <HomeIcon size={20} /> },
     {
-      href: '#',
+      href: '/dashboard/terminology',
+      label: 'Terminology',
+      icon: <FileTextIcon size={20} />
+    },
+    {
+      href: '/dashboard/search-terms',
+      label: 'Search Terms',
+      icon: <SearchIcon size={20} />
+    },
+    {
+      href: '/dashboard/categories',
+      label: 'Categories',
+      icon: <FolderIcon size={20} />
+    },
+    {
+      href: '/dashboard/insights',
+      label: 'Insights',
+      icon: <BarChartIcon size={20} />
+    },
+    {
+      href: '/dashboard/favorites',
       label: 'Favorites',
       badge: 120,
       icon: <FavouriteIcon size={20} />
     },
-    { href: '#', label: 'Profile', icon: <UserIcon size={20} /> },
-    { href: '#', label: 'Settings', icon: <SettingsIcon size={20} /> }
+    {
+      href: '/dashboard/profile',
+      label: 'Profile',
+      icon: <UserIcon size={20} />
+    },
+    {
+      href: '/dashboard/settings',
+      label: 'Settings',
+      icon: <SettingsIcon size={20} />
+    }
   ]
+
+  useEffect(() => {
+    const currentPath = location.pathname
+    const active = links.find((link) => currentPath === link.href)
+    if (active) {
+      if (active.label !== activeLink) {
+        setActiveLink(active.label)
+      }
+    }
+  }, [location.pathname, links])
+
   return (
     <aside
       className={`fixed left-0 top-0 h-full dark:bg-gray-800 text-white flex flex-col justify-between items-center min-h-screen bg-white shadow-md transition-all duration-300 ${
@@ -51,13 +88,13 @@ const Sidebar: React.FC = () => {
             isCollapsed && '!justify-center'
           }`}
         >
-          <a href="/">
+          <Link to="/">
             <img
               src="/logo-crop.svg"
               alt={name}
               className={`h-6 w-auto ${isCollapsed && 'hidden'}`}
             />
-          </a>
+          </Link>
           <button
             onClick={() => setIsCollapsed(!isCollapsed)}
             className="text-gray-700 hover:text-blue-500"
@@ -67,12 +104,11 @@ const Sidebar: React.FC = () => {
         </div>
         <nav className="flex-1 py-2 px-4">
           {links.map((link, index) => (
-            <TooltipProvider>
+            <TooltipProvider key={index}>
               <Tooltip>
                 <TooltipTrigger className="w-full">
-                  <a
-                    key={index}
-                    href={link.href}
+                  <Link
+                    to={link.href}
                     onClick={() => setActiveLink(link.label)}
                     className={`flex items-center p-3 rounded-md ${
                       activeLink === link.label
@@ -99,7 +135,7 @@ const Sidebar: React.FC = () => {
                         {link.badge}
                       </span>
                     )}
-                  </a>
+                  </Link>
                 </TooltipTrigger>
               </Tooltip>
             </TooltipProvider>

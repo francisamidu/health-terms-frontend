@@ -82,7 +82,7 @@ const Sidebar: React.FC = memo(() => {
   return (
     <aside
       className={`fixed left-0 top-0 h-full dark:bg-gray-800 text-white flex flex-col justify-between items-center min-h-screen bg-white shadow-md transition-all duration-300 ${
-        isCollapsed ? 'w-20' : 'w-64'
+        isCollapsed ? 'w-20' : 'w-[17rem]'
       }`}
     >
       <div className="w-full flex flex-col">

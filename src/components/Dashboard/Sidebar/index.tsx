@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useMemo, memo } from 'react'
 import {
   Home01Icon as HomeIcon,
   UserIcon,
@@ -20,51 +20,54 @@ import {
 import { Link, useLocation } from 'react-router'
 import { useAppInformation } from '@/contexts/AppInformationContext'
 
-const Sidebar: React.FC = () => {
+const Sidebar: React.FC = memo(() => {
   const { name } = useAppInformation()
   const location = useLocation()
   const [activeLink, setActiveLink] = useState<string>('')
   const [isCollapsed, setIsCollapsed] = useState<boolean>(false)
 
-  const links = [
-    { href: '/dashboard', label: 'Overview', icon: <HomeIcon size={20} /> },
-    {
-      href: '/dashboard/terminology',
-      label: 'Terminology',
-      icon: <FileTextIcon size={20} />
-    },
-    {
-      href: '/dashboard/search-terms',
-      label: 'Search Terms',
-      icon: <SearchIcon size={20} />
-    },
-    {
-      href: '/dashboard/categories',
-      label: 'Categories',
-      icon: <FolderIcon size={20} />
-    },
-    {
-      href: '/dashboard/insights',
-      label: 'Insights',
-      icon: <BarChartIcon size={20} />
-    },
-    {
-      href: '/dashboard/favorites',
-      label: 'Favorites',
-      badge: 120,
-      icon: <FavouriteIcon size={20} />
-    },
-    {
-      href: '/dashboard/profile',
-      label: 'Profile',
-      icon: <UserIcon size={20} />
-    },
-    {
-      href: '/dashboard/settings',
-      label: 'Settings',
-      icon: <SettingsIcon size={20} />
-    }
-  ]
+  const links = useMemo(
+    () => [
+      { href: '/dashboard', label: 'Overview', icon: <HomeIcon size={20} /> },
+      {
+        href: '/dashboard/terminology',
+        label: 'Terminology',
+        icon: <FileTextIcon size={20} />
+      },
+      {
+        href: '/dashboard/search-terms',
+        label: 'Search Terms',
+        icon: <SearchIcon size={20} />
+      },
+      {
+        href: '/dashboard/categories',
+        label: 'Categories',
+        icon: <FolderIcon size={20} />
+      },
+      {
+        href: '/dashboard/insights',
+        label: 'Insights',
+        icon: <BarChartIcon size={20} />
+      },
+      {
+        href: '/dashboard/favorites',
+        label: 'Favorites',
+        badge: 120,
+        icon: <FavouriteIcon size={20} />
+      },
+      {
+        href: '/dashboard/profile',
+        label: 'Profile',
+        icon: <UserIcon size={20} />
+      },
+      {
+        href: '/dashboard/settings',
+        label: 'Settings',
+        icon: <SettingsIcon size={20} />
+      }
+    ],
+    []
+  )
 
   useEffect(() => {
     const currentPath = location.pathname
@@ -74,7 +77,7 @@ const Sidebar: React.FC = () => {
         setActiveLink(active.label)
       }
     }
-  }, [location.pathname, links])
+  }, [location.pathname])
 
   return (
     <aside
@@ -102,7 +105,7 @@ const Sidebar: React.FC = () => {
             <SidebarLeftIcon size={20} />
           </button>
         </div>
-        <nav className="flex-1 py-2 px-4">
+        <nav className="flex-1 py-2 pl-1 pr-4">
           {links.map((link, index) => (
             <TooltipProvider key={index}>
               <Tooltip>
@@ -155,6 +158,6 @@ const Sidebar: React.FC = () => {
       </div>
     </aside>
   )
-}
+})
 
 export default Sidebar

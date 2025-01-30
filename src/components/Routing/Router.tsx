@@ -3,7 +3,8 @@ import React from 'react'
 
 import ChangeEmailForToken from '@/pages/ChangeEmail'
 import Dashboard from '@/pages/Dashboard'
-import Home from '@/components/Dashboard/Home'
+import Home from '@/pages/Home'
+import DashboboardHome from '@/components/Dashboard/Home'
 import Login from '@/pages/Login'
 import NotFound from '@/pages/NotFound'
 import ResetPassword from '@/pages/ResetPassword'
@@ -21,7 +22,7 @@ const AppRouter: React.FC = () => {
   return (
     <Routes>
       <Route path="dashboard" element={<Dashboard />}>
-        <Route index element={<ProtectedRoute Component={Home} />} />
+        <Route index element={<ProtectedRoute Component={DashboboardHome} />} />
       </Route>
 
       <Route path="auth" element={<AuthLayout />}>

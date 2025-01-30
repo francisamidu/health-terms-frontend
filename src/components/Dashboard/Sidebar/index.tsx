@@ -7,7 +7,7 @@ import {
   File01Icon as FileTextIcon,
   ChartBarLineIcon as BarChartIcon,
   CreditCardIcon,
-  Setting06Icon as SettingsIcon,
+  Settings01Icon as SettingsIcon,
   Logout01Icon as LogOutIcon
 } from 'hugeicons-react'
 import { useAppInformation } from '@/contexts/AppInformationContext'
@@ -33,11 +33,11 @@ const Sidebar: React.FC = () => {
   ]
 
   return (
-    <aside className="fixed left-0 top-0 h-full dark:bg-gray-800 text-white flex flex-col justify-between items-center min-h-screen">
-      <div className="h-screen w-64 bg-white shadow-md flex flex-col">
+    <aside className="fixed left-0 top-0 h-full dark:bg-gray-800 text-white flex flex-col justify-between items-center min-h-screen col-start-1 col-end-2 bg-white shadow-md min-w-[273px]">
+      <div className="w-full flex flex-col">
         <div className="flex items-center h-16">
           <a href="/">
-            <img src="/logo-crop.svg" alt={name} className="h-6 w-auto ml-3" />
+            <img src="/logo-crop.svg" alt={name} className="h-6 w-auto" />
           </a>
         </div>
         <nav className="flex-1 py-2 px-4">
@@ -46,11 +46,11 @@ const Sidebar: React.FC = () => {
               key={index}
               href={link.href}
               onClick={() => setActiveLink(link.label)}
-              className={`flex items-center p-2 ${
+              className={`flex items-center p-3 rounded-md ${
                 activeLink === link.label
                   ? 'bg-blue-50 text-blue-500 border-l-4 border-blue-500'
                   : 'text-gray-700 hover:text-blue-500'
-              }`}
+              } transition-all duration-200`}
             >
               <span
                 className={`mr-3 ${

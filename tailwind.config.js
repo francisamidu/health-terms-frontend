@@ -6,15 +6,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        'main-light': '#69a9d1',
-        'main-light-variant': '#3a6f8f',
-        main: '#074a8c',
-        'main-bluish': '#055a8c',
-        'main-dark': '#0a3f73',
-        'main-darker': '#07325a',
-        'main-dark-variant': '#0b4a6a',
-        'main-accent': '#055a8c',
-        'main-variant': '#3a6f8f'
+        'main-light': '#5f9edb',
+        'main-light-variant': '#3578a0',
+        main: '#0369a1',
+        'main-bluish': '#035a99',
+        'main-dark': '#084b8a',
+        'main-darker': '#063b6e',
+        'main-dark-variant': '#094a7a',
+        'main-accent': '#035a99',
+        'main-variant': '#3578a0'
       },
       borderRadius: {
         lg: 'var(--radius)',

@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react'
 import { Moon02Icon, Sun01Icon as SunIcon } from 'hugeicons-react'
-import { useDarkMode } from '@/contexts/ColorSchemeContext'
+import { useAtom, useAtomValue } from 'jotai'
+import { isDarkModeAtom } from '@/state/globalAtoms'
 
 function Navbar() {
-  const { isDarkMode, toggleDarkMode } = useDarkMode()
+  const isDarkMode = useAtomValue(isDarkModeAtom)
+  const [_, toggleDarkMode] = useAtom(isDarkModeAtom)
   const [isScrolled, setIsScrolled] = useState(false)
 
   useEffect(() => {
@@ -97,7 +99,7 @@ function Navbar() {
           </div>
         </div>
         <button
-          onClick={toggleDarkMode}
+          onClick={() => toggleDarkMode(!isDarkMode)}
           className="absolute top-1/2 -right-3 transform -translate-y-1/2 hover:cursor-pointer"
         >
           {isDarkMode ? (

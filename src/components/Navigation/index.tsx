@@ -7,12 +7,14 @@ import {
   UserUnlock01Icon
 } from 'hugeicons-react'
 import { useNavigate } from 'react-router'
-import { useDarkMode } from '@/contexts/ColorSchemeContext'
+import { useAtom, useAtomValue } from 'jotai'
+import { isDarkModeAtom } from '@/state/globalAtoms'
 
-function Navbar() {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
-  const { isDarkMode, toggleDarkMode } = useDarkMode()
+  const isDarkMode = useAtomValue(isDarkModeAtom)
+  const [_, toggleDarkMode] = useAtom(isDarkModeAtom)
 
   const navigate = useNavigate()
 
@@ -174,7 +176,7 @@ function Navbar() {
           </div>
         )}
         <button
-          onClick={toggleDarkMode}
+          onClick={() => toggleDarkMode(!isDarkMode)}
           className="absolute top-1/2 -right-3 transform -translate-y-1/2 hover:cursor-pointer"
         >
           {isDarkMode ? (

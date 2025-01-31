@@ -18,10 +18,11 @@ import {
   TooltipTrigger
 } from '@/components/ui/tooltip'
 import { Link, useLocation } from 'react-router'
-import { useAppInformation } from '@/contexts/AppInformationContext'
+import { useAtomValue } from 'jotai'
+import { appInfoAtom } from '@/state/globalAtoms'
 
 const Sidebar: React.FC = memo(() => {
-  const { name } = useAppInformation()
+  const { name } = useAtomValue(appInfoAtom)
   const location = useLocation()
   const [activeLink, setActiveLink] = useState<string>('')
   const [isCollapsed, setIsCollapsed] = useState<boolean>(false)

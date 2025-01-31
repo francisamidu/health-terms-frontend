@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
       </div>
       <div className="flex flex-row justify-center items-center">
         <Button
-          className="mr-2 hover:!bg-main-bluish"
+          className="dark:!text-white mr-2 hover:!bg-main-bluish"
           icon={<UserAdd01Icon size={15} />}
           text={'Get Started'}
           onClick={() => redirect('/auth/signup')}

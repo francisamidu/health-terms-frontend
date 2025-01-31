@@ -65,7 +65,7 @@ const Highlight: React.FC<HighlightProps> = ({
   }
   return (
     <div
-      className={`ml-3 text-xs leading-5 font-medium  dark:text-sky-400 dark:bg-main-light-variant bg-main-bluish text-main-bluish rounded-full py-[0.4rem] px-[0.85rem] hidden xl:flex items-center bg-opacity-10 ${className}`}
+      className={`ml-3 text-xs leading-5 font-medium  dark:text-sky-100 dark:bg-main-dark-variant bg-main-bluish text-main-bluish rounded-full py-[0.4rem] px-[0.85rem] hidden xl:flex items-center bg-opacity-10 ${className}`}
     >
       {_icon()}
       <strong className="font-semibold ml-2">{title}</strong>

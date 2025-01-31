@@ -85,6 +85,7 @@ const Navbar = () => {
           <div className="hidden md:flex space-x-4">
             <Button
               icon={<UserUnlock01Icon size={15} />}
+              className="dark:!text-white"
               text={'Sign in'}
               onClick={() => redirect('/auth/login')}
             />

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router'
 import { Moon02Icon, Sun01Icon as SunIcon } from 'hugeicons-react'
 import { useAtom, useAtomValue } from 'jotai'
 import { isDarkModeAtom } from '@/state/globalAtoms'
@@ -27,17 +28,17 @@ function Navbar() {
     >
       <div className="container mx-auto sm:px-6 relative">
         <div className="flex justify-between items-center">
-          <a href="/" className="text-2xl font-bold text-main-dark">
+          <Link to="/" className="text-2xl font-bold text-main-dark">
             <img
               src="/logo-crop.svg"
               alt="Health Illustration"
               className="h-5 w-auto sm:h-12 lg:h-7"
             />
-          </a>
+          </Link>
 
           <div className="hidden md:flex space-x-6">
-            <a
-              href="/privacy-policy"
+            <Link
+              to="/privacy-policy"
               className={`${
                 isScrolled
                   ? 'dark:text-gray-800 dark:hover:text-gray-500 text-main-bluish hover:text-main-dark'
@@ -45,9 +46,9 @@ function Navbar() {
               }`}
             >
               Privacy Policy
-            </a>
-            <a
-              href="/terms-of-use"
+            </Link>
+            <Link
+              to="/terms-of-use"
               className={`${
                 isScrolled
                   ? 'dark:text-gray-800 dark:hover:text-gray-500 text-main-bluish hover:text-main-dark'
@@ -55,9 +56,9 @@ function Navbar() {
               }`}
             >
               Terms of Use
-            </a>
-            <a
-              href="/faq"
+            </Link>
+            <Link
+              to="/faq"
               className={`${
                 isScrolled
                   ? 'dark:text-gray-800 dark:hover:text-gray-500 text-main-bluish hover:text-main-dark'
@@ -65,9 +66,9 @@ function Navbar() {
               }`}
             >
               FAQ
-            </a>
-            <a
-              href="/cookie-policy"
+            </Link>
+            <Link
+              to="/cookie-policy"
               className={`${
                 isScrolled
                   ? 'dark:text-gray-800 dark:hover:text-gray-500 text-main-bluish hover:text-main-dark'
@@ -75,7 +76,7 @@ function Navbar() {
               }`}
             >
               Cookie Policy
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}

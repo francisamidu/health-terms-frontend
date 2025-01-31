@@ -6,7 +6,7 @@ import {
   UserAdd01Icon,
   UserUnlock01Icon
 } from 'hugeicons-react'
-import { useNavigate } from 'react-router'
+import { Link, useNavigate } from 'react-router'
 import { useAtom, useAtomValue } from 'jotai'
 import { isDarkModeAtom } from '@/state/globalAtoms'
 
@@ -46,8 +46,8 @@ const Navbar = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="flex justify-between items-center">
           <div className="flex-shrink-0">
-            <a
-              href="/"
+            <Link
+              to="/"
               className="text-2xl font-bold text-main-dark dark:text-white"
             >
               <img
@@ -55,33 +55,33 @@ const Navbar = () => {
                 alt="Health Illustration"
                 className="h-5 w-auto sm:h-12 lg:h-7"
               />
-            </a>
+            </Link>
           </div>
           <div className="hidden md:flex space-x-6">
-            <a
-              href="/features"
+            <Link
+              to="/features"
               className="text-main-bluish hover:text-main-dark dark:text-white"
             >
               Features
-            </a>
-            <a
-              href="/about"
+            </Link>
+            <Link
+              to="/about"
               className="text-main-bluish hover:text-main-dark dark:text-white"
             >
               About
-            </a>
-            <a
-              href="/resources"
+            </Link>
+            <Link
+              to="/resources"
               className="text-main-bluish hover:text-main-dark dark:text-white"
             >
               Resources
-            </a>
-            <a
-              href="/contact"
+            </Link>
+            <Link
+              to="/contact"
               className="text-main-bluish hover:text-main-dark dark:text-white"
             >
               Contact
-            </a>
+            </Link>
           </div>
 
           <div className="hidden md:flex space-x-4">
@@ -134,43 +134,43 @@ const Navbar = () => {
         {isOpen && (
           <div className="md:hidden">
             <div className="space-y-4 mt-4">
-              <a
-                href="/features"
+              <Link
+                to="/features"
                 className="block text-gray-700 hover:text-main-dark dark:text-white"
               >
                 Features
-              </a>
-              <a
-                href="/about"
+              </Link>
+              <Link
+                to="/about"
                 className="block text-gray-700 hover:text-main-dark dark:text-white"
               >
                 About
-              </a>
-              <a
-                href="/resources"
+              </Link>
+              <Link
+                to="/resources"
                 className="block text-gray-700 hover:text-main-dark dark:text-white"
               >
                 Resources
-              </a>
-              <a
-                href="/contact"
+              </Link>
+              <Link
+                to="/contact"
                 className="block text-gray-700 hover:text-main-dark dark:text-white"
               >
                 Contact
-              </a>
+              </Link>
               <div className="space-y-4">
-                <a
-                  href="/auth/login"
+                <Link
+                  to="/auth/login"
                   className="block text-gray-700 hover:text-main-dark dark:text-white"
                 >
                   Login
-                </a>
-                <a
-                  href="/auth/signup"
+                </Link>
+                <Link
+                  to="/auth/signup"
                   className="block px-4 py-2 text-center text-white bg-blue-600 hover:bg-blue-700 rounded-md"
                 >
                   Try for free
-                </a>
+                </Link>
               </div>
             </div>
           </div>

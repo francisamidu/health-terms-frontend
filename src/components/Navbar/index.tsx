@@ -1,12 +1,10 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router'
 import { Moon02Icon, Sun01Icon as SunIcon } from 'hugeicons-react'
-import { useAtom, useAtomValue } from 'jotai'
-import { isDarkModeAtom } from '@/state/globalAtoms'
+import { useDark } from '@/hooks/useDark'
 
-function Navbar() {
-  const isDarkMode = useAtomValue(isDarkModeAtom)
-  const [_, toggleDarkMode] = useAtom(isDarkModeAtom)
+const Navbar = () => {
+  const { isDark: isDarkMode, toggleDark: toggleDarkMode } = useDark()
   const [isScrolled, setIsScrolled] = useState(false)
 
   useEffect(() => {
@@ -100,7 +98,7 @@ function Navbar() {
           </div>
         </div>
         <button
-          onClick={() => toggleDarkMode(!isDarkMode)}
+          onClick={() => toggleDarkMode()}
           className="absolute top-1/2 -right-3 transform -translate-y-1/2 hover:cursor-pointer"
         >
           {isDarkMode ? (

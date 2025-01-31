@@ -7,15 +7,13 @@ import {
   UserUnlock01Icon
 } from 'hugeicons-react'
 import { Link, useNavigate } from 'react-router'
-import { useAtom, useAtomValue } from 'jotai'
-import { isDarkModeAtom } from '@/state/globalAtoms'
+import { useDark } from '@/hooks/useDark'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
-  const isDarkMode = useAtomValue(isDarkModeAtom)
-  const [_, toggleDarkMode] = useAtom(isDarkModeAtom)
 
+  const { isDark, toggleDark: setColorMode } = useDark()
   const navigate = useNavigate()
 
   const redirect = (path: string) => {
@@ -176,10 +174,10 @@ const Navbar = () => {
           </div>
         )}
         <button
-          onClick={() => toggleDarkMode(!isDarkMode)}
+          onClick={() => setColorMode()}
           className="absolute top-1/2 -right-3 transform -translate-y-1/2 hover:cursor-pointer"
         >
-          {isDarkMode ? (
+          {isDark ? (
             <SunIcon size={25} className="text-yellow-500" />
           ) : (
             <Moon02Icon size={25} className="text-gray-700 dark:text-white" />

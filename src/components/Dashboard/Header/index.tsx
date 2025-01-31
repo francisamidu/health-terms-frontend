@@ -16,12 +16,10 @@ import {
   PopoverContent,
   PopoverTrigger
 } from '@/components/ui/popover'
-import { useAtom } from 'jotai'
-import { isDarkModeAtom } from '@/state/globalAtoms'
 
 const DashboardHeader: React.FC = () => {
   const [date, setDate] = React.useState<Date>()
-  const [isDarkMode, toggleDarkMode] = useAtom(isDarkModeAtom)
+
   return (
     <>
       <div className="bg-white w-full border-b-2 border-gray-100 fixed top-0 left-0 pl-[270px] z-[5]">

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Highlight from '@/components/Highlight'
 import Button from '@/components/Button'
-import { UserAdd01Icon, Mail01Icon } from 'hugeicons-react'
+import { UserAdd01Icon, Mail01Icon, } from 'hugeicons-react'
 import { useNavigate } from 'react-router'
 const Hero: React.FC = () => {
   const navigate = useNavigate()
@@ -19,11 +19,10 @@ const Hero: React.FC = () => {
       </div>
       <div className="my-4 flex flex-col justify-center items-center mx-auto md:w-3/4 px-4 md:px-0 text-center">
         <h1 className="font-medium md:text-7xl text-4xl">
-          Discover and Understand Medical Terms
+          Pregrancy Nutrition Guide made simple
         </h1>
         <h2 className="my-5 text-base w=3/4 md:w-1/2">
-          Your trusted resource for concise definitions of medical terms with
-          references to peer-reviewed journals.
+          Your trusted companion for personalized pregnancy nutrition tracking and guidance through every trimester
         </h2>
       </div>
       <div className="flex flex-row justify-center items-center">

@@ -8,9 +8,11 @@ const Dashboard: React.FC = () => {
     <div className="h-screen">
       <div className="grid grid-cols-[20%_80%]">
         <Sidebar />
-        <main className="col-start-2 col-end-3 flex flex-col items-center relative">
+        <main className="col-start-2 col-end-3 flex flex-col relative">
           <Header />
-          <Outlet />
+          <section className="mt-16 pl-2">
+            <Outlet />
+          </section>
         </main>
       </div>
     </div>

@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
           <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-400">
             Explore
           </h3>
-          <ul className="mt-4 space-y-2 text-gray-300">
+          <ul className="mt-4 space-y-2 dark:text-gray-300 text-gray-800">
             <li>
               <a href="#about" className="hover:underline">
                 About Medisync
@@ -51,10 +51,10 @@ const Footer: React.FC = () => {
           </ul>
         </div>
         <div>
-          <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-400">
+          <h3 className="text-xl font-semibold dark:text-gray-300 text-gray-800">
             Resources
           </h3>
-          <ul className="mt-4 space-y-2 text-gray-300">
+          <ul className="mt-4 space-y-2  dark:text-gray-300 text-gray-800">
             <li>
               <a href="#encyclopedia" className="hover:underline">
                 Medical Encyclopedia
@@ -81,7 +81,7 @@ const Footer: React.FC = () => {
           <h3 className="text-md uppercase font-bold text-gray-800 dark:text-gray-400">
             Stay Updated
           </h3>
-          <p className="text-gray-300 mt-2">
+          <p className="dark:text-gray-200 text-gray-600 mt-2">
             Subscribe to get the latest updates on Medisync and medical
             technology trends.
           </p>

@@ -12,12 +12,11 @@ const Privacy: React.FC = () => {
           <Highlight title="Eat for Two, Confidently" icon="nutrition" />
         </div>
         <h1 className="font-medium text-5xl my-2">
-          Protecting Your Medical Knowledge with Confidence
+          Supporting Your Pregnancy with Smart Nutrition
         </h1>
         <h2 className="my-5 text-base w-3/4">
-          Your trusted platform for securely accessing, managing, and
-          referencing medical terms from verified journals—where precision meets
-          privacy.
+          Your reliable guide to safe, balanced nutrition throughout
+          pregnancy—where expert recommendations meet easy-to-follow meal plans.
         </h2>
       </div>
     </section>

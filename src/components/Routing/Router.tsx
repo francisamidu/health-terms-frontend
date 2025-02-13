@@ -17,13 +17,14 @@ import AuthLayout from '../Auth/Layout'
 import Layout from '../Layout'
 import DashboardHome from '../Dashboard/Home'
 import ProtectedRoute from '../ProtectedRoute'
-import Categories from '../Dashboard/Categories'
-import Favorites from '../Dashboard/Favorites'
-import Insights from '../Dashboard/Insights'
+import NutritionLog from '../Dashboard/NutritionLog'
+import Recipes from '../Dashboard/Recipes'
+import Progress from '../Dashboard/Progress'
 import Profile from '../Dashboard/Profile'
-import SearchTerms from '../Dashboard/SearchTerms'
+import MealPlanner from '../Dashboard/MealPlanner'
 import Settings from '../Dashboard/Settings'
-import Terminology from '../Dashboard/Terminology'
+import FoodGuide from '../Dashboard/FoodGuide'
+import Supplements from '../Dashboard/Supplements'
 
 const AppRouter: React.FC = () => {
   return (
@@ -31,24 +32,36 @@ const AppRouter: React.FC = () => {
       <Route path="dashboard" element={<Dashboard />}>
         <Route index element={<ProtectedRoute Component={DashboardHome} />} />
         <Route
-          path="terminology"
-          element={<ProtectedRoute Component={Terminology} />}
+          path="food-guide"
+          element={<ProtectedRoute Component={FoodGuide} />}
         />
         <Route
-          path="search-terms"
-          element={<ProtectedRoute Component={SearchTerms} />}
+          path="meal-planner"
+          element={<ProtectedRoute Component={MealPlanner} />}
         />
         <Route
-          path="categories"
-          element={<ProtectedRoute Component={Categories} />}
+          path="nutrition-log"
+          element={<ProtectedRoute Component={NutritionLog} />}
         />
         <Route
-          path="insights"
-          element={<ProtectedRoute Component={Insights} />}
+          path="progress"
+          element={<ProtectedRoute Component={Progress} />}
         />
         <Route
-          path="favorites"
-          element={<ProtectedRoute Component={Favorites} />}
+          path="recipes"
+          element={<ProtectedRoute Component={Recipes} />}
+        />
+        <Route
+          path="water-tracking"
+          element={<ProtectedRoute Component={Supplements} />}
+        />
+        <Route
+          path="supplements"
+          element={<ProtectedRoute Component={Supplements} />}
+        />
+        <Route
+          path="recipes"
+          element={<ProtectedRoute Component={Recipes} />}
         />
         <Route
           path="profile"

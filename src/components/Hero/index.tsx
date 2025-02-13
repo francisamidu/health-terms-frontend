@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Highlight from '@/components/Highlight'
 import Button from '@/components/Button'
-import { UserAdd01Icon, Mail01Icon, } from 'hugeicons-react'
+import { ArrowRight02Icon as ArrowRightIcon, Mail01Icon } from 'hugeicons-react'
 import { useNavigate } from 'react-router'
 const Hero: React.FC = () => {
   const navigate = useNavigate()
@@ -22,20 +22,20 @@ const Hero: React.FC = () => {
           Pregrancy Nutrition Guide made simple
         </h1>
         <h2 className="my-5 text-base w=3/4 md:w-1/2">
-          Your trusted companion for personalized pregnancy nutrition tracking and guidance through every trimester
+          Your trusted companion for personalized pregnancy nutrition tracking
+          and guidance through every trimester
         </h2>
       </div>
       <div className="flex flex-row justify-center items-center">
         <Button
           className="dark:!text-white mr-2 hover:!bg-main-bluish"
-          icon={<UserAdd01Icon size={15} />}
-          text={'Get Started'}
+          icon={<ArrowRightIcon size={15} />}
+          text={'Try it for free'}
           onClick={() => redirect('/auth/signup')}
         />
         <Button
           className="ml-2 !bg-white !text-main-dark border-[1px] border-main-dark hover:!text-white hover:!bg-main-bluish"
-          icon={<Mail01Icon size={15} />}
-          text={'Contact Sales'}
+          text={'Pricing'}
           onClick={() => redirect('/contact-us')}
         />
       </div>

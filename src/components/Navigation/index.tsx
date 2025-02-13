@@ -3,8 +3,7 @@ import Button from '@/components/Button'
 import {
   Moon02Icon,
   Sun01Icon as SunIcon,
-  UserAdd01Icon,
-  UserUnlock01Icon
+  LockKeyIcon as LockIcon
 } from 'hugeicons-react'
 import { Link, useNavigate } from 'react-router'
 import { useDark } from '@/hooks/useDark'
@@ -84,7 +83,7 @@ const Navbar = () => {
 
           <div className="hidden md:flex space-x-4">
             <Button
-              icon={<UserUnlock01Icon size={15} />}
+              icon={<LockIcon size={15} />}
               className="dark:!text-white"
               text={'Sign in'}
               onClick={() => redirect('/auth/login')}
@@ -92,8 +91,7 @@ const Navbar = () => {
             <Button
               variant="outline"
               className="hover:!bg-main-bluish"
-              icon={<UserAdd01Icon size={15} />}
-              text={'Get Started'}
+              text={'Create free account'}
               onClick={() => redirect('/auth/signup')}
             />
           </div>

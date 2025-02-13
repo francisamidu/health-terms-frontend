@@ -5,36 +5,35 @@ import { TestimonialProps } from '@/types/TestimonialProps'
 const testimonials: TestimonialProps[] = [
   {
     image: '/woman.png',
-    quote: `The health terms dashboard has streamlined our terminology management process. It's easier than ever to create, update, and organize complex medical terms for our entire team.`,
-    name: 'Dr. Emma Scott',
-    designation: 'Medical Terminology Specialist, MediDefine'
-  },
-  {
-    image: '/man.png',
-    quote: `We've drastically reduced errors in documentation thanks to the real-time validation features. The dashboard ensures that everyone uses standardized and accurate terms across our organization.`,
-    name: 'Michael Harris',
-    designation: 'Clinical Documentation Manager, HealthSyn Systems'
+    quote: `This pregnancy nutrition app has totally transformed the way I plan meals. The trimester-specific recommendations and easy meal planning tools have made eating healthy during pregnancy so convenient.`,
+    name: 'Sarah Mitchell',
+    designation: 'First-time Mother, 28 weeks pregnant'
   },
   {
     image: '/woman.png',
-    quote: `Our research team saves hours every week using the dashboard's intuitive interface for managing medical vocabularies. It's become an invaluable tool for consistency in our data.`,
-    name: 'Dr. Aisha Patel',
-    designation: 'Research Scientist, BioTerms Institute'
+    quote: `As a registered dietitian, I highly endorse this app for all my prenatal patients. The nutrient tracking and food safety reminders are exactly what pregnant women need for a safe and healthy pregnancy experience.`,
+    name: 'Dr. Emma Rodriguez',
+    designation: 'Prenatal Nutrition Specialist, Maternal Health Center'
   },
   {
     image: '/woman.png',
-    quote: `The integration of the dashboard with our existing EHR systems has enhanced our workflow efficiency. We can now standardize terminology usage with minimal disruptions.`,
-    name: 'Sarah Lopez',
-    designation: 'EHR Integration Specialist, CareFlow Health'
+    quote: `The meal planning tools have been a lifesaver during my second pregnancy. Shopping lists and safe food substitutes help me easily enjoy a healthy diet while still allowing me to get my cravings on.`,
+    name: 'Jennifer Chen',
+    designation: 'Two-time mom, Food Blogger'
   },
   {
-    image: '/man.png',
-    quote: `The health terms system's version control and collaborative features have made it so much easier for multiple departments to work together. We've seen a marked improvement in communication and accuracy.`,
-    name: 'James Carter',
-    designation: 'Project Lead, MedTerms Initiative'
+    image: '/woman.png',
+    quote: `I appreciate how the app alters suggestions based on your trimester. The real-time notifications for food safety and nutrient consumption have helped me make better food choices.`,
+    name: 'Lisa Thompson',
+    designation: 'Expectant Mother, Group Fitness Instructor'
+  },
+  {
+    image: '/woman.png',
+    quote: `As an OB-GYN, I appreciate that this app combines evidence-based nutrition guidelines with functional meal planning aspects. It is exactly what my patients need for pregnancy nutrition guidance.`,
+    name: 'Dr. Maya Patel',
+    designation: "OB-GYN, Women's Wellness Clinic"
   }
 ]
-
 const Testimonials: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
 

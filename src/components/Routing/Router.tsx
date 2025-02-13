@@ -25,6 +25,7 @@ import MealPlanner from '../Dashboard/MealPlanner'
 import Settings from '../Dashboard/Settings'
 import FoodGuide from '../Dashboard/FoodGuide'
 import Supplements from '../Dashboard/Supplements'
+import WaterIntakeTracker from '../Dashboard/WaterTracking'
 
 const AppRouter: React.FC = () => {
   return (
@@ -53,7 +54,7 @@ const AppRouter: React.FC = () => {
         />
         <Route
           path="water-tracking"
-          element={<ProtectedRoute Component={Supplements} />}
+          element={<ProtectedRoute Component={WaterIntakeTracker} />}
         />
         <Route
           path="supplements"

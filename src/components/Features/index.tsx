@@ -18,30 +18,31 @@ const Features: React.FC = () => {
             />
           </div>
           <h1 className="font-medium text-4xl md:text-5xl my-2">
-            Unlock the Value of Intelligent Health Insights
+            Smart Nutrition Guidance for Every Stage of your Pregnancy
           </h1>
           <h2 className="my-5 text-base w-3/4">
-            Discover the power of a smarter way to understand, create, and
-            reference medical terms with ease—your gateway to credible knowledge
-            and precision.
+            Simple way to plan, track, and maintain healthy eating habits
+            throughout your pregnancy journey—your personal guide to nourishing
+            you and your baby.
           </h2>
         </div>
         <div className="grid grid-cols-1 grid-rows-[350px_350px] lg:grid-cols-8 gap-6 md:max-w-3/4 md:mx-auto">
           <div className="lg:col-span-5 bg-white dark:bg-gray-800 shadow-md rounded-lg p-6 flex flex-col justify-items-stretch">
             <div className="flex-1 w-full overflow-hidden">
               <LazyImage
-                alt="Easily Manage Schedules"
+                alt="Smart Trimester-Based Meal Planning"
                 className="w-full max-w-full h-auto"
                 src="/xenity-health.webp"
               />
             </div>
             <div className="flex-[0.5]">
               <h3 className="text-lg font-bold text-gray-800 dark:text-white mt-4">
-                Easily Manage Schedules And Appointments
+                Smart Trimester-Based Meal Planning
               </h3>
               <p className="text-gray-600 dark:text-gray-300 mt-2">
-                Organize caregiver schedules and balance workloads with a
-                drag-and-drop Calendar and Workload view.
+                Create your own personalized meal plans using our drag-and-drop
+                calendar, with trimester-based nutrition recommendations and
+                easy recipe adjustments.
               </p>
             </div>
           </div>
@@ -49,16 +50,16 @@ const Features: React.FC = () => {
           <div className="lg:col-span-3 bg-white dark:bg-gray-800 shadow-md rounded-xl p-6 flex flex-col justify-items-stretch">
             <div className="flex-[0.5]">
               <h3 className="text-lg font-bold text-gray-800 dark:text-white">
-                Manage Patients With Efficiency
+                Monitor Must-Have Nutrients
               </h3>
               <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
-                Automate appointment scheduling and track patient info with
-                custom fields.
+                Monitor essential nutrients and receive individualized reminders
+                to be nutritionally optimal as well as for your baby.
               </p>
             </div>
             <div className="flex-1 w-full overflow-hidden">
               <LazyImage
-                alt="Easily Manage Schedules"
+                alt="Monitor Must-Have Nutrients"
                 className="w-full max-w-full h-auto"
                 src="/dummy_600x400_000000_a4f9c1.png"
               />
@@ -68,16 +69,16 @@ const Features: React.FC = () => {
           <div className="lg:col-span-3 bg-white dark:bg-gray-800 shadow-md rounded-xl p-6 flex flex-col justify-items-stretch">
             <div className="flex-[0.5]">
               <h3 className="text-lg font-bold text-gray-800 dark:text-white">
-                Streamline Communication
+                Smart Food Safety Reminders
               </h3>
               <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
-                Create real-time cross-departmental communication channels
-                directly.
+                Get real-time food safety reminders when you are pregnant and
+                find out safe substitutes for your cravings.
               </p>
             </div>
             <div className="mt-4 flex-1 landing-lazy-image-small w-full overflow-hidden">
               <LazyImage
-                alt="Streamline Communication"
+                alt="Smart Food Safety Reminders"
                 className="w-full max-w-full h-auto"
                 src="/dummy_600x400_000000_a4f9c1.png"
               />
@@ -87,18 +88,18 @@ const Features: React.FC = () => {
           <div className="lg:col-span-5 bg-white dark:bg-gray-800 shadow-md rounded-xl p-6 flex flex-col justify-items-stretch">
             <div className="flex-1 w-full overflow-hidden">
               <LazyImage
-                alt="Fortify Financial Wellness"
+                alt="Smart Shopping & Recipes"
                 src="/xenity-health.webp"
                 className="w-full max-w-full h-auto"
               />
             </div>
             <div className="flex-[0.5]">
               <h3 className="text-lg font-bold text-gray-800 dark:text-white mt-4">
-                Fortify Financial Wellness
+                Smart Shopping & Recipes
               </h3>
               <p className="text-gray-600 dark:text-gray-300 mt-2">
-                Unlock the power of comprehensive income management to ensure
-                financial transparency and efficiency.
+                Design smart shopping lists from your menus and locate
+                pregnancy-safe recipes that fit your palate.
               </p>
             </div>
           </div>

@@ -2,14 +2,16 @@ import React, { useState, useEffect, useMemo, memo } from 'react'
 import {
   Home01Icon as HomeIcon,
   UserIcon,
-  Search01Icon as SearchIcon,
+  DropletIcon,
+  Calendar02Icon as CalendarIcon,
   Folder01Icon as FolderIcon,
-  File01Icon as FileTextIcon,
+  OrganicFoodIcon as FoodIcon,
   ChartIncreaseIcon as BarChartIcon,
-  FavouriteIcon,
+  CookBookIcon,
   Settings01Icon as SettingsIcon,
   Logout04Icon as LogOutIcon,
-  SidebarLeftIcon
+  SidebarLeftIcon,
+  GivePillIcon as PillIcon
 } from 'hugeicons-react'
 import {
   Tooltip,
@@ -29,32 +31,46 @@ const Sidebar: React.FC = memo(() => {
 
   const links = useMemo(
     () => [
-      { href: '/dashboard', label: 'Overview', icon: <HomeIcon size={20} /> },
       {
-        href: '/dashboard/terminology',
-        label: 'Terminology',
-        icon: <FileTextIcon size={20} />
+        href: '/dashboard',
+        label: 'Overview',
+        icon: <HomeIcon size={20} />
       },
       {
-        href: '/dashboard/search-terms',
-        label: 'Search Terms',
-        icon: <SearchIcon size={20} />
+        href: '/dashboard/nutrition-log',
+        label: 'Daily Log',
+        icon: <CalendarIcon size={20} />
       },
       {
-        href: '/dashboard/categories',
-        label: 'Categories',
+        href: '/dashboard/meal-planner',
+        label: 'Meal Planner',
         icon: <FolderIcon size={20} />
       },
       {
-        href: '/dashboard/insights',
-        label: 'Insights',
+        href: '/dashboard/food-guide',
+        label: 'Food Guide',
+        icon: <FoodIcon size={20} />
+      },
+      {
+        href: '/dashboard/progress',
+        label: 'Progress',
         icon: <BarChartIcon size={20} />
       },
       {
-        href: '/dashboard/favorites',
-        label: 'Favorites',
-        badge: 120,
-        icon: <FavouriteIcon size={20} />
+        href: '/dashboard/recipes',
+        label: 'Recipes',
+        badge: 50,
+        icon: <CookBookIcon size={20} />
+      },
+      {
+        href: '/dashboard/supplements',
+        label: 'Supplements',
+        icon: <PillIcon size={20} />
+      },
+      {
+        href: '/dashboard/water-tracking',
+        label: 'Water Intake',
+        icon: <DropletIcon size={20} />
       },
       {
         href: '/dashboard/profile',

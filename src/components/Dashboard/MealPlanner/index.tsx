@@ -30,10 +30,10 @@ import { NutritionPreferences, Meal } from '@/types/MealProps'
 export default function MealPlanning() {
   const [activeTab, setActiveTab] = useState('weeklyPlan')
   const [preferences, setPreferences] = useState<NutritionPreferences>({
-    vegetarian: false,
     dairyFree: false,
     glutenFree: false,
-    nutFree: false
+    nutFree: false,
+    vegetarian: false
   })
   const [trimester, setTrimester] = useState<1 | 2 | 3>(1)
 
@@ -78,7 +78,7 @@ export default function MealPlanning() {
     <div className="container mx-auto p-4 space-y-6">
       <div className="flex justify-between items-center">
         <div>
-          <h1 className="text-3xl font-bold text-main-darker">
+          <h1 className="text-3xl font-bold text-main-darkest">
             Pregnancy Meal Planner
           </h1>
           <p className="text-gray-500">
@@ -92,21 +92,21 @@ export default function MealPlanning() {
 
       <div className="grid gap-6 md:grid-cols-3">
         <Card className="md:col-span-2">
-          <Tabs defaultValue="weeklyPlan">
+          <Tabs defaultValue="weekly-plan">
             <CardHeader>
               <div className="flex justify-between items-center">
-                <CardTitle className="text-main-darker">
+                <CardTitle className="text-main-darkest">
                   Meal Planning
                 </CardTitle>
                 <TabsList>
-                  <TabsTrigger value="weeklyPlan">Weekly Plan</TabsTrigger>
+                  <TabsTrigger value="weekly-plan">Weekly Plan</TabsTrigger>
                   <TabsTrigger value="recipes">Recipes</TabsTrigger>
                   <TabsTrigger value="shopping">Shopping List</TabsTrigger>
                 </TabsList>
               </div>
             </CardHeader>
             <CardContent>
-              <TabsContent value="weeklyPlan">
+              <TabsContent value="weekly-plan">
                 {weeklyMeals.map((meal, index) => (
                   <div key={index} className="mb-6 p-4 border rounded-lg">
                     <div className="flex justify-between items-center mb-4">
@@ -158,12 +158,106 @@ export default function MealPlanning() {
 
               <TabsContent value="recipes">
                 <div className="grid md:grid-cols-2 gap-4">
-                  {/* Recipe cards */}
+                  {weeklyMeals.map((meal, index) => (
+                    <div key={index} className="mb-6 p-4 border rounded-lg">
+                      <div className="flex justify-between items-center mb-4">
+                        <h3 className="text-lg font-semibold">{meal.day}</h3>
+                        <div className="flex gap-2">
+                          {meal.tags.map((tag, i) => (
+                            <Badge key={i} variant="secondary">
+                              {tag}
+                            </Badge>
+                          ))}
+                        </div>
+                      </div>
+
+                      <div className="grid md:grid-cols-3 gap-4">
+                        <div>
+                          <h4 className="font-medium mb-2">Breakfast</h4>
+                          <p className="text-gray-600">{meal.breakfast}</p>
+                        </div>
+                        <div>
+                          <h4 className="font-medium mb-2">Lunch</h4>
+                          <p className="text-gray-600">{meal.lunch}</p>
+                        </div>
+                        <div>
+                          <h4 className="font-medium mb-2">Dinner</h4>
+                          <p className="text-gray-600">{meal.dinner}</p>
+                        </div>
+                      </div>
+
+                      <div className="mt-4 pt-4 border-t">
+                        <div className="flex justify-between items-center">
+                          <div className="flex gap-4">
+                            <span className="text-sm">
+                              <ClockIcon className="inline mr-1 h-4 w-4" />
+                              {meal.preparationTime} mins
+                            </span>
+                            <span className="text-sm">
+                              {meal.nutrients.calories} kcal
+                            </span>
+                          </div>
+                          <Button variant="outline" size="sm">
+                            <BookmarkIcon className="mr-2 h-4 w-4" />
+                            Save
+                          </Button>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </TabsContent>
 
               <TabsContent value="shopping">
-                <div className="space-y-4">{/* Shopping list */}</div>
+                <div className="space-y-4">
+                  {weeklyMeals.map((meal, index) => (
+                    <div key={index} className="mb-6 p-4 border rounded-lg">
+                      <div className="flex justify-between items-center mb-4">
+                        <h3 className="text-lg font-semibold">{meal.day}</h3>
+                        <div className="flex gap-2">
+                          {meal.tags.map((tag, i) => (
+                            <Badge key={i} variant="secondary">
+                              {tag}
+                            </Badge>
+                          ))}
+                        </div>
+                      </div>
+
+                      <div className="grid md:grid-cols-3 gap-4">
+                        <div>
+                          <h4 className="font-medium mb-2">Breakfast</h4>
+                          <p className="text-gray-600">{meal.breakfast}</p>
+                        </div>
+                        <div>
+                          <h4 className="font-medium mb-2">Lunch</h4>
+                          <p className="text-gray-600">{meal.lunch}</p>
+                        </div>
+                        <div>
+                          <h4 className="font-medium mb-2">Dinner</h4>
+                          <p className="text-gray-600">{meal.dinner}</p>
+                        </div>
+                      </div>
+
+                      <div className="mt-4 pt-4 border-t">
+                        <div className="flex justify-between items-center">
+                          <div className="flex gap-4">
+                            <span className="text-sm">
+                              <ClockIcon className="inline mr-1 h-4 w-4" />
+                              {meal.preparationTime} mins
+                            </span>
+                            <span className="text-sm">
+                              {meal.nutrients.calories} kcal
+                            </span>
+                          </div>
+                          <Button variant="outline" size="sm">
+                            <BookmarkIcon className="mr-2 h-4 w-4" />
+                            Save
+                          </Button>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </TabsContent>
             </CardContent>
           </Tabs>
@@ -172,7 +266,7 @@ export default function MealPlanning() {
         <div className="space-y-6">
           <Card>
             <CardHeader>
-              <CardTitle className="text-main-darker">
+              <CardTitle className="text-main-darkest">
                 Nutrition Preferences
               </CardTitle>
             </CardHeader>
@@ -198,7 +292,7 @@ export default function MealPlanning() {
 
           <Card>
             <CardHeader>
-              <CardTitle className="text-main-darker">
+              <CardTitle className="text-main-darkest">
                 Trimester-Specific Tips
               </CardTitle>
             </CardHeader>

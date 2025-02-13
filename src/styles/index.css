@@ -8,7 +8,7 @@ html {
 
 body {
   font-family: 'Rubik Variable', sans-serif;
-  @apply !text-slate-800;
+  @apply !text-main-darker;
   @apply !bg-white;
   margin: 0;
   padding: 0;

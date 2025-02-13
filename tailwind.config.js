@@ -12,6 +12,7 @@ export default {
         'main-bluish': '#035a99',
         'main-dark': '#084b8a',
         'main-darker': '#063b6e',
+        'main-darkest': '#031c35',
         'main-dark-variant': '#094a7a',
         'main-accent': '#035a99',
         'main-variant': '#3578a0'

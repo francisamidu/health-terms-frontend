@@ -9,7 +9,7 @@ const Privacy: React.FC = () => {
     >
       <div className="my-4 flex flex-col justify-center items-center mx-auto md:w-3/4  text-center">
         <div className="w-fit">
-          <Highlight title="No more worries" icon="shield-energy" />
+          <Highlight title="Eat for Two, Confidently" icon="nutrition" />
         </div>
         <h1 className="font-medium text-5xl my-2">
           Protecting Your Medical Knowledge with Confidence

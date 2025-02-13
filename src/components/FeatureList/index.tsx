@@ -30,8 +30,8 @@ const FeatureList: React.FC = () => {
           <div className="w-fit">
             <Highlight
               className="!ml-0"
-              title="Terms Management"
-              icon="terms"
+              title="Nutrition Tracking"
+              icon="nutrition-tracking"
             />
           </div>
           <h1 className="font-medium text-4xl md:text-5xl my-2">

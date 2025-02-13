@@ -8,7 +8,9 @@ const Hero: React.FC = () => {
   const redirect = (path: string) => {
     navigate(path)
   }
-  const [title, _] = useState('The best health search tool is out now! 🚀')
+  const [title, _] = useState(
+    'The best nutrition guide for pregnant women is out now! 🚀'
+  )
   return (
     <section>
       <div

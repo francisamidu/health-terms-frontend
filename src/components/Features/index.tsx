@@ -13,7 +13,7 @@ const Features: React.FC = () => {
           <div className="w-fit">
             <Highlight
               className="!ml-0"
-              title="Valuable Features"
+              title="Essential Features"
               icon="feature"
             />
           </div>

@@ -1,8 +1,9 @@
 import {
   Comment01Icon,
-  BookEditIcon,
-  ShieldEnergyIcon,
-  UserMultiple02Icon
+  ChartLineData01Icon,
+  ApplePieIcon,
+  UserMultiple02Icon,
+  OrganicFoodIcon
 } from 'hugeicons-react'
 import React from 'react'
 import { HighlightProps } from '@/types'
@@ -50,12 +51,12 @@ const Highlight: React.FC<HighlightProps> = ({
       case 'comment':
         return <Comment01Icon className="dark:text-sky-400" size={20} />
       case 'feature':
-        return <BookEditIcon className="dark:text-sky-400" size={20} />
-      case 'shield-energy':
-        return <ShieldEnergyIcon className="dark:text-sky-400" size={20} />
-      case 'terms':
+        return <ApplePieIcon className="dark:text-sky-400" size={20} />
+      case 'nutrition':
+        return <OrganicFoodIcon className="dark:text-sky-400" size={20} />
+      case 'nutrition-tracking':
         return (
-          <Chart01Icon className="text-normal text-main-dark dark:text-sky-400" />
+          <ChartLineData01Icon className="text-normal text-main-dark dark:text-sky-400" />
         )
       case 'users':
         return <UserMultiple02Icon className="dark:text-sky-400" size={20} />

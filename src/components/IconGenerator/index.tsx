@@ -1,6 +1,10 @@
 import React from 'react'
 
-import { File01Icon, Search01Icon } from 'hugeicons-react'
+import {
+  ChartLineData03Icon,
+  Notification03Icon,
+  NaturalFoodIcon
+} from 'hugeicons-react'
 import { IconProps } from '@/types/Icon'
 
 const IconGenerator: React.FC<IconProps> = ({ name }) => {
@@ -60,12 +64,12 @@ const IconGenerator: React.FC<IconProps> = ({ name }) => {
       </svg>
     )
     switch (name) {
-      case 'glossary':
-        return <File01Icon className="text-xl text-blue-500 " />
-      case 'search':
-        return <Search01Icon className="text-xl" />
-      case 'server-stack':
-        return <ServerStack01Icon className="text-xl text-blue-500 " />
+      case 'meal-plan':
+        return <NaturalFoodIcon className="text-xl text-blue-500 " />
+      case 'nutrition-track':
+        return <ChartLineData03Icon className="text-xl" />
+      case 'food-safety':
+        return <Notification03Icon className="text-xl text-blue-500 " />
       default:
         return null
     }

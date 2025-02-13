@@ -4,21 +4,25 @@ import IconGenerator from '@/components/IconGenerator'
 
 const featureList = [
   {
-    icon: 'server-stack',
-    title: 'Explore Medical Terms with Ease.',
-    description: `Effortlessly  manage accurate medical terms with detailed, customizable descriptions for diverse audiences.`
+    icon: 'meal-plan',
+    title: 'Smart Meal Planning',
+    description:
+      'Create personalized pregnancy meal plans with our simple planning tools.'
   },
   {
-    icon: 'glossary',
-    title: 'Comprehensive Glossary',
-    description: `Explore a rich library of thoroughly organized medical terms designed to help professionals, and patients alike`
+    icon: 'nutrition-track',
+    title: 'Nutrient Tracking',
+    description:
+      'Monitor essential pregnancy nutrients with smart tracking and alerts.'
   },
   {
-    icon: 'search',
-    title: 'Search Medical Terms',
-    description: `Easily find precise, detailed definitions for any medical term using our intuitive and reliable search functionality.`
+    icon: 'food-safety',
+    title: 'Food Safety Alerts',
+    description:
+      'Stay up-to-date on food safety with real-time advice and notifications.'
   }
 ]
+
 const FeatureList: React.FC = () => {
   return (
     <section
